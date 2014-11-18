@@ -1,0 +1,43 @@
+﻿@{
+    //General resource (scripts, styles, icons, etc) inclusions go in this file
+    //Child themes can override this file to override resource inclusion
+}
+
+@using Orchard.Mvc.Html;
+@using Orchard.UI.Resources;
+
+@{
+    var theme = WorkContext.CurrentTheme;
+
+    //favicon
+    RegisterLink(
+        new LinkEntry { 
+            Type = "image/x-icon",
+            Rel = "shortcut icon",
+            Href = Url.Content(theme.Location + "/" + theme.Path + "/Images/" + "favicon.ico")
+        }
+    );
+
+    SetMeta(
+        new MetaEntry {
+            Name = "viewport",
+            Content = "width=device-width, initial-scale=1.0"
+        }
+    );
+
+    SetMeta(
+        new MetaEntry {
+            HttpEquiv = "X-UA-Compatible",
+            Content = "IE=edge,chrome=1"
+        }
+    );
+
+    Style.Include("site.css");
+
+    //for IE < 9, include HTML5Shiv in the head
+    Script.Include("~/Core/Shapes/Scripts/html5.js").UseCondition("IE lt 9").AtHead();
+
+    Script.Require("jQuery").AtFoot();
+    
+    Script.Include("../Content/bootstrap/dist/js/bootstrap.js", "../Content/bootstrap/dist/js/bootstrap.min.js").AtFoot();
+}

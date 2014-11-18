@@ -1,0 +1,10 @@
+﻿@* This shape template is overriding ~/Orchard.Core/Shapes/Views/MenuItemLink.cshtml *@
+
+@if (Model.IsDropdown)
+{
+    <a href="@Model.Href">@Model.Text <span class="caret"></span></a>
+}
+else
+{
+    <a href="@Model.Href">@Model.Text</a>
+}

@@ -1,0 +1,68 @@
+﻿@import "base.less";
+
+/** CSM.Bootstrap: grid system layout **/
+
+body {
+    width: 100%;
+
+    #layout-wrapper {
+        //.container-fixed();
+
+        margin: 0 auto;
+
+        @media @media-lg {
+            width: 95%;
+        }
+
+        @media @media-xl {
+            width: 85%;
+        }
+
+        @media @media-xxl {
+            width: 80%;
+        }
+
+        #layout-header {
+            //.make-row();
+            .container-fixed();
+        }
+
+        #layout-navigation {
+            //.make-row();
+            .container-fixed();
+
+            .zone-navigation {
+                //.make-md-column(@grid-columns);
+            }
+        }
+
+        #layout-featured {
+            //.make-row();
+            .container-fixed();
+        }
+
+        #layout-main-container {
+            //.make-row();
+            .container-fixed();
+
+            #layout-content {
+                //.make-md-column(@grid-columns);
+
+                #before-content, #content, #after-content {
+                    //.make-row();
+                    //margin-left: 0;
+                    //margin-right: 0;
+                }
+            }
+        }
+
+        #layout-footer {
+            //.make-row();
+            .container-fixed();
+
+            #footer {
+                //.make-md-column(@grid-columns);
+            }
+        }
+    }
+}

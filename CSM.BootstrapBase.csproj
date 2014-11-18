@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{060A4C13-E9C5-46A3-8E2F-323AA9F1C6EB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSM.BootstrapBase</RootNamespace>
+    <AssemblyName>CSM.BootstrapBase</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Mvc, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\lib\aspnetmvc\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="Content\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="Content\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="Content\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="Content\bootstrap\dist\js\npm.js" />
+    <Content Include="Content\bootstrap\js\affix.js" />
+    <Content Include="Content\bootstrap\js\alert.js" />
+    <Content Include="Content\bootstrap\js\button.js" />
+    <Content Include="Content\bootstrap\js\carousel.js" />
+    <Content Include="Content\bootstrap\js\collapse.js" />
+    <Content Include="Content\bootstrap\js\dropdown.js" />
+    <Content Include="Content\bootstrap\js\modal.js" />
+    <Content Include="Content\bootstrap\js\popover.js" />
+    <Content Include="Content\bootstrap\js\scrollspy.js" />
+    <Content Include="Content\bootstrap\js\tab.js" />
+    <Content Include="Content\bootstrap\js\tests\index.html" />
+    <Content Include="Content\bootstrap\js\tests\unit\affix.js" />
+    <Content Include="Content\bootstrap\js\tests\unit\alert.js" />
+    <Content Include="Content\bootstrap\js\tests\unit\button.js" />
+    <Content Include="Content\bootstrap\js\tests\unit\carousel.js" />
+    <Content Include="Content\bootstrap\js\tests\unit\collapse.js" />
+    <Content Include="Content\bootstrap\js\tests\unit\dropdown.js" />
+    <Content Include="Content\bootstrap\js\tests\unit\modal.js" />
+    <Content Include="Content\bootstrap\js\tests\unit\phantom.js" />
+    <Content Include="Content\bootstrap\js\tests\unit\popover.js" />
+    <Content Include="Content\bootstrap\js\tests\unit\scrollspy.js" />
+    <Content Include="Content\bootstrap\js\tests\unit\tab.js" />
+    <Content Include="Content\bootstrap\js\tests\unit\tooltip.js" />
+    <Content Include="Content\bootstrap\js\tests\vendor\jquery.min.js" />
+    <Content Include="Content\bootstrap\js\tests\vendor\qunit.css" />
+    <Content Include="Content\bootstrap\js\tests\vendor\qunit.js" />
+    <Content Include="Content\bootstrap\js\tests\visual\affix.html" />
+    <Content Include="Content\bootstrap\js\tests\visual\alert.html" />
+    <Content Include="Content\bootstrap\js\tests\visual\button.html" />
+    <Content Include="Content\bootstrap\js\tests\visual\carousel.html" />
+    <Content Include="Content\bootstrap\js\tests\visual\collapse.html" />
+    <Content Include="Content\bootstrap\js\tests\visual\dropdown.html" />
+    <Content Include="Content\bootstrap\js\tests\visual\modal.html" />
+    <Content Include="Content\bootstrap\js\tests\visual\popover.html" />
+    <Content Include="Content\bootstrap\js\tests\visual\scrollspy.html" />
+    <Content Include="Content\bootstrap\js\tests\visual\tab.html" />
+    <Content Include="Content\bootstrap\js\tests\visual\tooltip.html" />
+    <Content Include="Content\bootstrap\js\tooltip.js" />
+    <Content Include="Content\bootstrap\js\transition.js" />
+    <Content Include="Styles\grid.css">
+      <DependentUpon>grid.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\navs.css">
+      <DependentUpon>navs.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\base.css">
+      <DependentUpon>base.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\site.css">
+      <DependentUpon>site.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\type.css">
+      <DependentUpon>type.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\variables.css">
+      <DependentUpon>variables.less</DependentUpon>
+    </Content>
+    <Content Include="Web.config" />
+    <Content Include="Scripts\Web.config" />
+    <Content Include="Styles\Web.config" />
+    <Content Include="Content\Web.config" />
+    <Content Include="Theme.txt" />
+    <Content Include="Theme.png" />
+    <Content Include="Placement.info" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Orchard\Orchard.Framework.csproj">
+      <Project>{2D1D92BB-4555-4CBE-8D0E-63563D6CE4C6}</Project>
+      <Name>Orchard.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Orchard.Core.csproj">
+      <Project>{9916839C-39FC-4CEB-A5AF-89CA7E87119F}</Project>
+      <Name>Orchard.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\NavbarBranding.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap\js\.jscsrc" />
+    <Content Include="Content\bootstrap\js\.jshintrc" />
+    <Content Include="Content\bootstrap\js\tests\unit\.jshintrc" />
+    <Content Include="Content\bootstrap\less\.csscomb.json" />
+    <Content Include="Content\bootstrap\less\.csslintrc" />
+    <Content Include="Content\bootstrap\less\alerts.less" />
+    <Content Include="Content\bootstrap\less\badges.less" />
+    <Content Include="Content\bootstrap\less\bootstrap.less" />
+    <Content Include="Content\bootstrap\less\breadcrumbs.less" />
+    <Content Include="Content\bootstrap\less\button-groups.less" />
+    <Content Include="Content\bootstrap\less\buttons.less" />
+    <Content Include="Content\bootstrap\less\carousel.less" />
+    <Content Include="Content\bootstrap\less\close.less" />
+    <Content Include="Content\bootstrap\less\code.less" />
+    <Content Include="Content\bootstrap\less\component-animations.less" />
+    <Content Include="Content\bootstrap\less\dropdowns.less" />
+    <Content Include="Content\bootstrap\less\forms.less" />
+    <Content Include="Content\bootstrap\less\glyphicons.less" />
+    <Content Include="Content\bootstrap\less\grid.less" />
+    <Content Include="Content\bootstrap\less\input-groups.less" />
+    <Content Include="Content\bootstrap\less\jumbotron.less" />
+    <Content Include="Content\bootstrap\less\labels.less" />
+    <Content Include="Content\bootstrap\less\list-group.less" />
+    <Content Include="Content\bootstrap\less\media.less" />
+    <Content Include="Content\bootstrap\less\mixins.less" />
+    <Content Include="Content\bootstrap\less\mixins\alerts.less" />
+    <Content Include="Content\bootstrap\less\mixins\background-variant.less" />
+    <Content Include="Content\bootstrap\less\mixins\border-radius.less" />
+    <Content Include="Content\bootstrap\less\mixins\buttons.less" />
+    <Content Include="Content\bootstrap\less\mixins\center-block.less" />
+    <Content Include="Content\bootstrap\less\mixins\clearfix.less" />
+    <Content Include="Content\bootstrap\less\mixins\forms.less" />
+    <Content Include="Content\bootstrap\less\mixins\gradients.less" />
+    <Content Include="Content\bootstrap\less\mixins\grid-framework.less" />
+    <Content Include="Content\bootstrap\less\mixins\grid.less" />
+    <Content Include="Content\bootstrap\less\mixins\hide-text.less" />
+    <Content Include="Content\bootstrap\less\mixins\image.less" />
+    <Content Include="Content\bootstrap\less\mixins\labels.less" />
+    <Content Include="Content\bootstrap\less\mixins\list-group.less" />
+    <Content Include="Content\bootstrap\less\mixins\nav-divider.less" />
+    <Content Include="Content\bootstrap\less\mixins\nav-vertical-align.less" />
+    <Content Include="Content\bootstrap\less\mixins\opacity.less" />
+    <Content Include="Content\bootstrap\less\mixins\pagination.less" />
+    <Content Include="Content\bootstrap\less\mixins\panels.less" />
+    <Content Include="Content\bootstrap\less\mixins\progress-bar.less" />
+    <Content Include="Content\bootstrap\less\mixins\reset-filter.less" />
+    <Content Include="Content\bootstrap\less\mixins\resize.less" />
+    <Content Include="Content\bootstrap\less\mixins\responsive-visibility.less" />
+    <Content Include="Content\bootstrap\less\mixins\size.less" />
+    <Content Include="Content\bootstrap\less\mixins\tab-focus.less" />
+    <Content Include="Content\bootstrap\less\mixins\table-row.less" />
+    <Content Include="Content\bootstrap\less\mixins\text-emphasis.less" />
+    <Content Include="Content\bootstrap\less\mixins\text-overflow.less" />
+    <Content Include="Content\bootstrap\less\mixins\vendor-prefixes.less" />
+    <Content Include="Content\bootstrap\less\modals.less" />
+    <Content Include="Content\bootstrap\less\navbar.less" />
+    <Content Include="Content\bootstrap\less\navs.less" />
+    <Content Include="Content\bootstrap\less\normalize.less" />
+    <Content Include="Content\bootstrap\less\pager.less" />
+    <Content Include="Content\bootstrap\less\pagination.less" />
+    <Content Include="Content\bootstrap\less\panels.less" />
+    <Content Include="Content\bootstrap\less\popovers.less" />
+    <Content Include="Content\bootstrap\less\print.less" />
+    <Content Include="Content\bootstrap\less\progress-bars.less" />
+    <Content Include="Content\bootstrap\less\responsive-embed.less" />
+    <Content Include="Content\bootstrap\less\responsive-utilities.less" />
+    <Content Include="Content\bootstrap\less\scaffolding.less" />
+    <Content Include="Content\bootstrap\less\tables.less" />
+    <Content Include="Content\bootstrap\less\theme.less" />
+    <Content Include="Content\bootstrap\less\thumbnails.less" />
+    <Content Include="Content\bootstrap\less\tooltip.less" />
+    <Content Include="Content\bootstrap\less\type.less" />
+    <Content Include="Content\bootstrap\less\utilities.less" />
+    <Content Include="Content\bootstrap\less\variables.less" />
+    <Content Include="Content\bootstrap\less\wells.less" />
+    <Content Include="Styles\base.less" />
+    <Content Include="Styles\base.css.map">
+      <DependentUpon>base.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\navs.less" />
+    <Content Include="Styles\navs.css.map">
+      <DependentUpon>navs.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\grid.less" />
+    <Content Include="Styles\grid.css.map">
+      <DependentUpon>grid.css</DependentUpon>
+    </Content>
+    <Content Include="Content\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="Content\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Styles\site.less" />
+    <Content Include="Views\Document.cshtml" />
+    <Content Include="Views\Resources.cshtml" />
+    <Content Include="Views\Insertions.cshtml" />
+    <Content Include="Styles\variables.css.map">
+      <DependentUpon>variables.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\type.less" />
+    <Content Include="Styles\type.css.map">
+      <DependentUpon>type.css</DependentUpon>
+    </Content>
+    <Content Include="Views\MenuItem.cshtml" />
+    <Content Include="Views\MenuItemLink.cshtml" />
+    <Content Include="Views\Zone-Navigation.cshtml" />
+    <Content Include="Views\Menu.cshtml" />
+    <Content Include="Views\Widget-MenuWidget.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\variables.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\BadgeOfHonor.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\site.css.map">
+      <DependentUpon>site.css</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" DependsOnTargets="AfterBuildCompiler">
+    <PropertyGroup>
+      <AreasManifestDir>$(ProjectDir)\..\Manifests</AreasManifestDir>
+    </PropertyGroup>
+    <!-- If this is an area child project, uncomment the following line:
+    <CreateAreaManifest AreaName="$(AssemblyName)" AreaType="Child" AreaPath="$(ProjectDir)" ManifestPath="$(AreasManifestDir)" ContentFiles="@(Content)" />
+    -->
+    <!-- If this is an area parent project, uncomment the following lines:
+    <CreateAreaManifest AreaName="$(AssemblyName)" AreaType="Parent" AreaPath="$(ProjectDir)" ManifestPath="$(AreasManifestDir)" ContentFiles="@(Content)" />
+    <CopyAreaManifests ManifestPath="$(AreasManifestDir)" CrossCopy="false" RenameViews="true" />
+    -->
+  </Target>
+  <Target Name="AfterBuildCompiler" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)\..\$(ProjectName)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>45979</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://orchard.codeplex.com</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

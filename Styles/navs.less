@@ -1,0 +1,42 @@
+﻿@import "base.less";
+
+@import "../Content/bootstrap/less/utilities.less";
+@import "../Content/bootstrap/less/forms.less";
+@import "../Content/bootstrap/less/navs.less";
+@import "../Content/bootstrap/less/dropdowns.less";
+@import "../Content/bootstrap/less/navbar.less";
+
+/** CSM.Bootstrap: navigation and nav elements **/
+
+#layout-navigation {
+
+    .zone-navigation {
+        .navbar-default();
+
+        #branding {
+            .navbar-header();
+        }
+
+        ul.menu {
+            .nav();
+            .navbar-nav();
+
+            li:not(.dropdown) {
+
+            }
+
+            li.dropdown {
+                > a {
+                    .navbar-toggle();
+                }
+
+                > ul {
+                    .dropdown-menu();
+                    left: auto;
+                    top: auto;
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}

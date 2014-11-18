@@ -1,0 +1,11 @@
+﻿@*
+    a "widget alternate" for the Menu widget
+    see http://docs.orchardproject.net/Documentation/Alternates#URLandWidgetAlternates for more info
+*@
+
+@{
+    //removes the <article> wrapper around this menu widget
+    Model.Metadata.Wrappers.Clear();
+}
+
+@Display(Model.Content)

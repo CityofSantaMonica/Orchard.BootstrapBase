@@ -1,0 +1,21 @@
+﻿@{
+    //"Ad-hoc" shape insertions should go in this file
+    //see http://weblogs.asp.net/bleroy/creating-shapes-on-the-fly for more info
+
+    //Child themes can override this file to override the default ad-hoc layout shapes
+}
+
+@{
+    /* Inserting some ad hoc shapes
+    ***************************************************************/
+
+    // The Analytics script is only displayed if the site is live.
+    if (!String.IsNullOrEmpty(WorkContext.CurrentSite.BaseUrl) 
+    && WorkContext.HttpContext.Request.Url.Host == new Uri(WorkContext.CurrentSite.BaseUrl).Host)
+    {
+        Layout.Head.Add(New.Analytics(), "5");
+    }
+
+    //Layout.Navigation.Add(New.NavbarBranding(), "0"); // Site name and link to the home page
+    Layout.Footer.Add(New.User(), "10"); // Login and dashboard links
+}
