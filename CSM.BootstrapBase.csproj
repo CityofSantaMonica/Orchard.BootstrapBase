@@ -151,7 +151,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\NavbarBranding.cshtml" />
+    <Content Include="Views\NavbarHeader.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap\js\.jscsrc" />
