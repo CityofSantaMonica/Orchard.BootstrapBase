@@ -67,61 +67,50 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap\dist\css\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap\dist\css\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap\dist\css\bootstrap.css" />
-    <Content Include="Content\bootstrap\dist\css\bootstrap.min.css" />
-    <Content Include="Content\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Content\bootstrap\dist\js\bootstrap.js" />
-    <Content Include="Content\bootstrap\dist\js\bootstrap.min.js" />
-    <Content Include="Content\bootstrap\dist\js\npm.js" />
-    <Content Include="Content\bootstrap\js\affix.js" />
-    <Content Include="Content\bootstrap\js\alert.js" />
-    <Content Include="Content\bootstrap\js\button.js" />
-    <Content Include="Content\bootstrap\js\carousel.js" />
-    <Content Include="Content\bootstrap\js\collapse.js" />
-    <Content Include="Content\bootstrap\js\dropdown.js" />
-    <Content Include="Content\bootstrap\js\modal.js" />
-    <Content Include="Content\bootstrap\js\popover.js" />
-    <Content Include="Content\bootstrap\js\scrollspy.js" />
-    <Content Include="Content\bootstrap\js\tab.js" />
-    <Content Include="Content\bootstrap\js\tests\index.html" />
-    <Content Include="Content\bootstrap\js\tests\unit\affix.js" />
-    <Content Include="Content\bootstrap\js\tests\unit\alert.js" />
-    <Content Include="Content\bootstrap\js\tests\unit\button.js" />
-    <Content Include="Content\bootstrap\js\tests\unit\carousel.js" />
-    <Content Include="Content\bootstrap\js\tests\unit\collapse.js" />
-    <Content Include="Content\bootstrap\js\tests\unit\dropdown.js" />
-    <Content Include="Content\bootstrap\js\tests\unit\modal.js" />
-    <Content Include="Content\bootstrap\js\tests\unit\phantom.js" />
-    <Content Include="Content\bootstrap\js\tests\unit\popover.js" />
-    <Content Include="Content\bootstrap\js\tests\unit\scrollspy.js" />
-    <Content Include="Content\bootstrap\js\tests\unit\tab.js" />
-    <Content Include="Content\bootstrap\js\tests\unit\tooltip.js" />
-    <Content Include="Content\bootstrap\js\tests\vendor\jquery.min.js" />
-    <Content Include="Content\bootstrap\js\tests\vendor\qunit.css" />
-    <Content Include="Content\bootstrap\js\tests\vendor\qunit.js" />
-    <Content Include="Content\bootstrap\js\tests\visual\affix.html" />
-    <Content Include="Content\bootstrap\js\tests\visual\alert.html" />
-    <Content Include="Content\bootstrap\js\tests\visual\button.html" />
-    <Content Include="Content\bootstrap\js\tests\visual\carousel.html" />
-    <Content Include="Content\bootstrap\js\tests\visual\collapse.html" />
-    <Content Include="Content\bootstrap\js\tests\visual\dropdown.html" />
-    <Content Include="Content\bootstrap\js\tests\visual\modal.html" />
-    <Content Include="Content\bootstrap\js\tests\visual\popover.html" />
-    <Content Include="Content\bootstrap\js\tests\visual\scrollspy.html" />
-    <Content Include="Content\bootstrap\js\tests\visual\tab.html" />
-    <Content Include="Content\bootstrap\js\tests\visual\tooltip.html" />
-    <Content Include="Content\bootstrap\js\tooltip.js" />
-    <Content Include="Content\bootstrap\js\transition.js" />
+    <Content Include="Scripts\bootstrap\dist\bootstrap.js" />
+    <Content Include="Scripts\bootstrap\dist\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap\dist\npm.js" />
+    <Content Include="Scripts\bootstrap\affix.js" />
+    <Content Include="Scripts\bootstrap\alert.js" />
+    <Content Include="Scripts\bootstrap\button.js" />
+    <Content Include="Scripts\bootstrap\carousel.js" />
+    <Content Include="Scripts\bootstrap\collapse.js" />
+    <Content Include="Scripts\bootstrap\dropdown.js" />
+    <Content Include="Scripts\bootstrap\modal.js" />
+    <Content Include="Scripts\bootstrap\popover.js" />
+    <Content Include="Scripts\bootstrap\scrollspy.js" />
+    <Content Include="Scripts\bootstrap\tab.js" />
+    <Content Include="Scripts\bootstrap\tests\index.html" />
+    <Content Include="Scripts\bootstrap\tests\unit\affix.js" />
+    <Content Include="Scripts\bootstrap\tests\unit\alert.js" />
+    <Content Include="Scripts\bootstrap\tests\unit\button.js" />
+    <Content Include="Scripts\bootstrap\tests\unit\carousel.js" />
+    <Content Include="Scripts\bootstrap\tests\unit\collapse.js" />
+    <Content Include="Scripts\bootstrap\tests\unit\dropdown.js" />
+    <Content Include="Scripts\bootstrap\tests\unit\modal.js" />
+    <Content Include="Scripts\bootstrap\tests\unit\phantom.js" />
+    <Content Include="Scripts\bootstrap\tests\unit\popover.js" />
+    <Content Include="Scripts\bootstrap\tests\unit\scrollspy.js" />
+    <Content Include="Scripts\bootstrap\tests\unit\tab.js" />
+    <Content Include="Scripts\bootstrap\tests\unit\tooltip.js" />
+    <Content Include="Scripts\bootstrap\tests\vendor\jquery.min.js" />
+    <Content Include="Scripts\bootstrap\tests\vendor\qunit.css" />
+    <Content Include="Scripts\bootstrap\tests\vendor\qunit.js" />
+    <Content Include="Scripts\bootstrap\tests\visual\affix.html" />
+    <Content Include="Scripts\bootstrap\tests\visual\alert.html" />
+    <Content Include="Scripts\bootstrap\tests\visual\button.html" />
+    <Content Include="Scripts\bootstrap\tests\visual\carousel.html" />
+    <Content Include="Scripts\bootstrap\tests\visual\collapse.html" />
+    <Content Include="Scripts\bootstrap\tests\visual\dropdown.html" />
+    <Content Include="Scripts\bootstrap\tests\visual\modal.html" />
+    <Content Include="Scripts\bootstrap\tests\visual\popover.html" />
+    <Content Include="Scripts\bootstrap\tests\visual\scrollspy.html" />
+    <Content Include="Scripts\bootstrap\tests\visual\tab.html" />
+    <Content Include="Scripts\bootstrap\tests\visual\tooltip.html" />
+    <Content Include="Scripts\bootstrap\tooltip.js" />
+    <Content Include="Scripts\bootstrap\transition.js" />
     <Content Include="Styles\grid.css">
       <DependentUpon>grid.less</DependentUpon>
-    </Content>
-    <Content Include="Styles\navs.css">
-      <DependentUpon>navs.less</DependentUpon>
-    </Content>
-    <Content Include="Styles\base.css">
-      <DependentUpon>base.less</DependentUpon>
     </Content>
     <Content Include="Styles\site.css">
       <DependentUpon>site.less</DependentUpon>
@@ -154,98 +143,83 @@
     <Content Include="Views\NavbarHeader.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap\js\.jscsrc" />
-    <Content Include="Content\bootstrap\js\.jshintrc" />
-    <Content Include="Content\bootstrap\js\tests\unit\.jshintrc" />
-    <Content Include="Content\bootstrap\less\.csscomb.json" />
-    <Content Include="Content\bootstrap\less\.csslintrc" />
-    <Content Include="Content\bootstrap\less\alerts.less" />
-    <Content Include="Content\bootstrap\less\badges.less" />
-    <Content Include="Content\bootstrap\less\bootstrap.less" />
-    <Content Include="Content\bootstrap\less\breadcrumbs.less" />
-    <Content Include="Content\bootstrap\less\button-groups.less" />
-    <Content Include="Content\bootstrap\less\buttons.less" />
-    <Content Include="Content\bootstrap\less\carousel.less" />
-    <Content Include="Content\bootstrap\less\close.less" />
-    <Content Include="Content\bootstrap\less\code.less" />
-    <Content Include="Content\bootstrap\less\component-animations.less" />
-    <Content Include="Content\bootstrap\less\dropdowns.less" />
-    <Content Include="Content\bootstrap\less\forms.less" />
-    <Content Include="Content\bootstrap\less\glyphicons.less" />
-    <Content Include="Content\bootstrap\less\grid.less" />
-    <Content Include="Content\bootstrap\less\input-groups.less" />
-    <Content Include="Content\bootstrap\less\jumbotron.less" />
-    <Content Include="Content\bootstrap\less\labels.less" />
-    <Content Include="Content\bootstrap\less\list-group.less" />
-    <Content Include="Content\bootstrap\less\media.less" />
-    <Content Include="Content\bootstrap\less\mixins.less" />
-    <Content Include="Content\bootstrap\less\mixins\alerts.less" />
-    <Content Include="Content\bootstrap\less\mixins\background-variant.less" />
-    <Content Include="Content\bootstrap\less\mixins\border-radius.less" />
-    <Content Include="Content\bootstrap\less\mixins\buttons.less" />
-    <Content Include="Content\bootstrap\less\mixins\center-block.less" />
-    <Content Include="Content\bootstrap\less\mixins\clearfix.less" />
-    <Content Include="Content\bootstrap\less\mixins\forms.less" />
-    <Content Include="Content\bootstrap\less\mixins\gradients.less" />
-    <Content Include="Content\bootstrap\less\mixins\grid-framework.less" />
-    <Content Include="Content\bootstrap\less\mixins\grid.less" />
-    <Content Include="Content\bootstrap\less\mixins\hide-text.less" />
-    <Content Include="Content\bootstrap\less\mixins\image.less" />
-    <Content Include="Content\bootstrap\less\mixins\labels.less" />
-    <Content Include="Content\bootstrap\less\mixins\list-group.less" />
-    <Content Include="Content\bootstrap\less\mixins\nav-divider.less" />
-    <Content Include="Content\bootstrap\less\mixins\nav-vertical-align.less" />
-    <Content Include="Content\bootstrap\less\mixins\opacity.less" />
-    <Content Include="Content\bootstrap\less\mixins\pagination.less" />
-    <Content Include="Content\bootstrap\less\mixins\panels.less" />
-    <Content Include="Content\bootstrap\less\mixins\progress-bar.less" />
-    <Content Include="Content\bootstrap\less\mixins\reset-filter.less" />
-    <Content Include="Content\bootstrap\less\mixins\resize.less" />
-    <Content Include="Content\bootstrap\less\mixins\responsive-visibility.less" />
-    <Content Include="Content\bootstrap\less\mixins\size.less" />
-    <Content Include="Content\bootstrap\less\mixins\tab-focus.less" />
-    <Content Include="Content\bootstrap\less\mixins\table-row.less" />
-    <Content Include="Content\bootstrap\less\mixins\text-emphasis.less" />
-    <Content Include="Content\bootstrap\less\mixins\text-overflow.less" />
-    <Content Include="Content\bootstrap\less\mixins\vendor-prefixes.less" />
-    <Content Include="Content\bootstrap\less\modals.less" />
-    <Content Include="Content\bootstrap\less\navbar.less" />
-    <Content Include="Content\bootstrap\less\navs.less" />
-    <Content Include="Content\bootstrap\less\normalize.less" />
-    <Content Include="Content\bootstrap\less\pager.less" />
-    <Content Include="Content\bootstrap\less\pagination.less" />
-    <Content Include="Content\bootstrap\less\panels.less" />
-    <Content Include="Content\bootstrap\less\popovers.less" />
-    <Content Include="Content\bootstrap\less\print.less" />
-    <Content Include="Content\bootstrap\less\progress-bars.less" />
-    <Content Include="Content\bootstrap\less\responsive-embed.less" />
-    <Content Include="Content\bootstrap\less\responsive-utilities.less" />
-    <Content Include="Content\bootstrap\less\scaffolding.less" />
-    <Content Include="Content\bootstrap\less\tables.less" />
-    <Content Include="Content\bootstrap\less\theme.less" />
-    <Content Include="Content\bootstrap\less\thumbnails.less" />
-    <Content Include="Content\bootstrap\less\tooltip.less" />
-    <Content Include="Content\bootstrap\less\type.less" />
-    <Content Include="Content\bootstrap\less\utilities.less" />
-    <Content Include="Content\bootstrap\less\variables.less" />
-    <Content Include="Content\bootstrap\less\wells.less" />
-    <Content Include="Styles\base.less" />
-    <Content Include="Styles\base.css.map">
-      <DependentUpon>base.css</DependentUpon>
-    </Content>
-    <Content Include="Styles\navs.less" />
-    <Content Include="Styles\navs.css.map">
-      <DependentUpon>navs.css</DependentUpon>
-    </Content>
+    <Content Include="Scripts\bootstrap\.jscsrc" />
+    <Content Include="Scripts\bootstrap\.jshintrc" />
+    <Content Include="Scripts\bootstrap\tests\unit\.jshintrc" />
+    <Content Include="Styles\bootstrap\alerts.less" />
+    <Content Include="Styles\bootstrap\badges.less" />
+    <Content Include="Styles\bootstrap\bootstrap.less" />
+    <Content Include="Styles\bootstrap\breadcrumbs.less" />
+    <Content Include="Styles\bootstrap\button-groups.less" />
+    <Content Include="Styles\bootstrap\buttons.less" />
+    <Content Include="Styles\bootstrap\carousel.less" />
+    <Content Include="Styles\bootstrap\close.less" />
+    <Content Include="Styles\bootstrap\code.less" />
+    <Content Include="Styles\bootstrap\component-animations.less" />
+    <Content Include="Styles\bootstrap\dropdowns.less" />
+    <Content Include="Styles\bootstrap\forms.less" />
+    <Content Include="Styles\bootstrap\glyphicons.less" />
+    <Content Include="Styles\bootstrap\grid.less" />
+    <Content Include="Styles\bootstrap\input-groups.less" />
+    <Content Include="Styles\bootstrap\jumbotron.less" />
+    <Content Include="Styles\bootstrap\labels.less" />
+    <Content Include="Styles\bootstrap\list-group.less" />
+    <Content Include="Styles\bootstrap\media.less" />
+    <Content Include="Styles\bootstrap\mixins.less" />
+    <Content Include="Styles\bootstrap\mixins\alerts.less" />
+    <Content Include="Styles\bootstrap\mixins\background-variant.less" />
+    <Content Include="Styles\bootstrap\mixins\border-radius.less" />
+    <Content Include="Styles\bootstrap\mixins\buttons.less" />
+    <Content Include="Styles\bootstrap\mixins\center-block.less" />
+    <Content Include="Styles\bootstrap\mixins\clearfix.less" />
+    <Content Include="Styles\bootstrap\mixins\forms.less" />
+    <Content Include="Styles\bootstrap\mixins\gradients.less" />
+    <Content Include="Styles\bootstrap\mixins\grid-framework.less" />
+    <Content Include="Styles\bootstrap\mixins\grid.less" />
+    <Content Include="Styles\bootstrap\mixins\hide-text.less" />
+    <Content Include="Styles\bootstrap\mixins\image.less" />
+    <Content Include="Styles\bootstrap\mixins\labels.less" />
+    <Content Include="Styles\bootstrap\mixins\list-group.less" />
+    <Content Include="Styles\bootstrap\mixins\nav-divider.less" />
+    <Content Include="Styles\bootstrap\mixins\nav-vertical-align.less" />
+    <Content Include="Styles\bootstrap\mixins\opacity.less" />
+    <Content Include="Styles\bootstrap\mixins\pagination.less" />
+    <Content Include="Styles\bootstrap\mixins\panels.less" />
+    <Content Include="Styles\bootstrap\mixins\progress-bar.less" />
+    <Content Include="Styles\bootstrap\mixins\reset-filter.less" />
+    <Content Include="Styles\bootstrap\mixins\resize.less" />
+    <Content Include="Styles\bootstrap\mixins\responsive-visibility.less" />
+    <Content Include="Styles\bootstrap\mixins\size.less" />
+    <Content Include="Styles\bootstrap\mixins\tab-focus.less" />
+    <Content Include="Styles\bootstrap\mixins\table-row.less" />
+    <Content Include="Styles\bootstrap\mixins\text-emphasis.less" />
+    <Content Include="Styles\bootstrap\mixins\text-overflow.less" />
+    <Content Include="Styles\bootstrap\mixins\vendor-prefixes.less" />
+    <Content Include="Styles\bootstrap\modals.less" />
+    <Content Include="Styles\bootstrap\navbar.less" />
+    <Content Include="Styles\bootstrap\navs.less" />
+    <Content Include="Styles\bootstrap\normalize.less" />
+    <Content Include="Styles\bootstrap\pager.less" />
+    <Content Include="Styles\bootstrap\pagination.less" />
+    <Content Include="Styles\bootstrap\panels.less" />
+    <Content Include="Styles\bootstrap\popovers.less" />
+    <Content Include="Styles\bootstrap\print.less" />
+    <Content Include="Styles\bootstrap\progress-bars.less" />
+    <Content Include="Styles\bootstrap\responsive-embed.less" />
+    <Content Include="Styles\bootstrap\responsive-utilities.less" />
+    <Content Include="Styles\bootstrap\scaffolding.less" />
+    <Content Include="Styles\bootstrap\tables.less" />
+    <Content Include="Styles\bootstrap\theme.less" />
+    <Content Include="Styles\bootstrap\thumbnails.less" />
+    <Content Include="Styles\bootstrap\tooltip.less" />
+    <Content Include="Styles\bootstrap\type.less" />
+    <Content Include="Styles\bootstrap\utilities.less" />
+    <Content Include="Styles\bootstrap\variables.less" />
+    <Content Include="Styles\bootstrap\wells.less" />
     <Content Include="Styles\grid.less" />
     <Content Include="Styles\grid.css.map">
       <DependentUpon>grid.css</DependentUpon>
     </Content>
-    <Content Include="Content\bootstrap\dist\css\bootstrap-theme.css.map" />
-    <Content Include="Content\bootstrap\dist\css\bootstrap.css.map" />
-    <Content Include="Content\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Content\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Styles\site.less" />
     <Content Include="Views\Document.cshtml" />
     <Content Include="Views\Resources.cshtml" />
@@ -262,6 +236,9 @@
     <Content Include="Views\Zone-Navigation.cshtml" />
     <Content Include="Views\Menu.cshtml" />
     <Content Include="Views\Widget-MenuWidget.cshtml" />
+    <Content Include="Views\Parts.MenuWidget-AsideSecond.cshtml" />
+    <Content Include="Views\Dropdown.cshtml" />
+    <None Include="Views\Zone-Featured.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Styles\variables.less" />
@@ -277,6 +254,7 @@
       <DependentUpon>site.css</DependentUpon>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
