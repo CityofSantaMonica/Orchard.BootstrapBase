@@ -115,6 +115,7 @@
     <Content Include="Styles\site.css">
       <DependentUpon>site.less</DependentUpon>
     </Content>
+    <Content Include="Styles\test.css" />
     <Content Include="Styles\type.css">
       <DependentUpon>type.less</DependentUpon>
     </Content>
@@ -292,7 +293,7 @@
           <IISUrl>
           </IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
-          <UseCustomServer>True</UseCustomServer>
+          <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>http://orchard.codeplex.com</CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
