@@ -6,4 +6,4 @@ Version: 1.0.0
 OrchardVersion: 1.8.1
 BootstrapVersion: 3.3.0
 Tags: Bootstrap
-Zones: Header, Navigation, Featured, AsideFirst, Content, AsideSecond, Footer
+Zones: Header, Navigation, Featured, AsideFirst, Content, AsideSecond, TripelFirst, TripelSecond, TripelThird, Footer

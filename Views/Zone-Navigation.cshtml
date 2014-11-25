@@ -1,15 +1,15 @@
 @using Orchard.Core.Shapes
 
-<nav class="zone zone-navigation navbar navbar-default" role="navigation">
+<div class="zone zone-navigation navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
             @Display(New.NavbarHeader())
         </div>
-        <div class="collapse navbar-collapse" id="navbar-collapse">
+        <nav class="collapse navbar-collapse" id="navbar-collapse">
             @foreach (var item in CoreShapes.Order(Model.Items))
             {
                 @Display(item)
             }
-        </div>
+        </nav>
     </div>
-</nav>
+</div>

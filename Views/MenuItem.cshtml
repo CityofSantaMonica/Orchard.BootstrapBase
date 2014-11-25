@@ -44,9 +44,7 @@
                 @renderedMenuItemLink
                 if (Model.IsDropdown)
                 {
-                <ul class="dropdown-menu" role="menu">
-                    @DisplayChildren(Model)
-                </ul>
+                @Display(New.Dropdown(Model))
                 }
                 @tag.EndElement
             }

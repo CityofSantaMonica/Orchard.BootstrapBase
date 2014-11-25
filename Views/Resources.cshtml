@@ -11,7 +11,7 @@
 
     //favicon
     RegisterLink(
-        new LinkEntry { 
+        new LinkEntry {
             Type = "image/x-icon",
             Rel = "shortcut icon",
             Href = Url.Content(theme.Location + "/" + theme.Path + "/Images/" + "favicon.ico")
@@ -34,10 +34,15 @@
 
     Style.Include("site.css");
 
+    Script.Include("//use.typekit.net/aop8rmf.js").AtHead();
+    using (Script.Head())
+    {
+        <script>try { Typekit.load(); } catch (e) { }</script>
+    }
+
     //for IE < 9, include HTML5Shiv in the head
     Script.Include("~/Core/Shapes/Scripts/html5.js").UseCondition("IE lt 9").AtHead();
-
     Script.Require("jQuery").AtFoot();
-    
-    Script.Include("../Content/bootstrap/dist/js/bootstrap.js", "../Content/bootstrap/dist/js/bootstrap.min.js").AtFoot();
+    Script.Require("jQueryUI").AtFoot();
+    Script.Include("../Scripts/bootstrap/dist/bootstrap.js", "../Scripts/bootstrap/dist/bootstrap.min.js").AtFoot();
 }

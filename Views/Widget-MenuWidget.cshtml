@@ -6,6 +6,7 @@
 @{
     //removes the <article> wrapper around this menu widget
     Model.Metadata.Wrappers.Clear();
+    var menu = Display(Model.Content);
 }
 
-@Display(Model.Content)
+@menu

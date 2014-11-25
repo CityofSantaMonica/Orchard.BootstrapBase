@@ -20,9 +20,31 @@
 @media-xl: ~"only screen and (min-width: @{screen-xl-min})"; 
 @media-xxl: ~"only screen and (min-width: @{screen-xxl-min})";
 
+/* FINANCE THEME SPECIFICS */
+
+@white: #ffffff;
+@teal: #94b8b1;
+@orange: #fae2a8;
+@olive: #dce5be;
+@yellow: #fbf5b5;
+@seafoam: #b0dab9;
+
 // Bootstrap overrides
+
+//colors
+
+@body-bg: @teal;
+@navbar-default-bg: @orange;
+@jumbotron-bg: @olive;
+
+//grid
 
 @grid-float-breakpoint: @screen-md-min;
 
-/* FINANCE THEME SPECIFICS */
-@navbar-default-bg: #94b8b1;
+//nav
+@navbar-height: 54px;
+
+//type
+
+@font-family-base: aktiv-grotesk-std;
+@headings-font-family: abril-titling-condensed;
