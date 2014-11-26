@@ -21,11 +21,12 @@ h1, h2, h3, h4, h5, h6,
     text-transform: uppercase;
 }
 
-
-
 #layout-navigation {
     .navbar-header {
         a {
+            font-size: @font-size-base * 1.05;
+            font-weight: bold;
+            line-height: @line-height-base * 0.90;
             &:hover {
                 text-decoration: none;
             }
@@ -34,6 +35,12 @@ h1, h2, h3, h4, h5, h6,
     nav {
         font-size: @font-size-base * 1.05;
         font-weight: bold;
+    }
+}
+
+#aside-second {
+    .dropdown-header {
+        font-size: @font-size-h3;
     }
 }
 

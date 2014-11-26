@@ -14,22 +14,14 @@ body {
 }
 
 #layout-navigation {
-    .navbar-header {
-        .media {
-            margin-bottom: 15px;
-        }
-    }
-
-    .navbar {
-        margin-bottom: 0;
-    }
+    background: url("../Content/Images/navbar-bg-alt.jpg") top left repeat;
 }
-
 
 #layout-featured {
     .jumbotron {
         background: url("../Content/Images/field.jpg") center center no-repeat;
         color: @white !important;
+        margin-bottom: 0;
 
         article {
             background-color: rgba(0, 0, 0, 0.4);
@@ -47,11 +39,34 @@ body {
 }
 
 #layout-tripel-container {
-    background-color: @orange;
-}
+    background: url("../Content/Images/homepage-orange-bg.jpg") top left repeat;
 
-#tripel-first,
-#tripel-second,
-#tripel-third {
-    /*background-color: @yellow;*/
+    .widget-homepageBusinessLicenseRenewal {
+        > header{
+            background: url("../Content/Images/icon-business-license.png") no-repeat top center;
+        }
+    }
+
+    .widget-homepageCitationInformation {
+        > header {
+            background: url("../Content/Images/icon-citations.png") no-repeat top center;
+        }
+    }
+
+    .widget-homepageWaterBill {
+        > header {
+            background: url("../Content/Images/icon-utility-bill.png") no-repeat top center;
+        }
+    }
+
+    .widget-html-widget {
+        @baseline: 63px;
+
+        margin-top: @baseline / 2;
+
+        > header {
+            padding-top: @baseline * 2;
+            background-size: @baseline * 2 @baseline * 2;
+        }
+    }
 }

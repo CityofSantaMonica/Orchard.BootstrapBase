@@ -8,9 +8,11 @@
 
     Display.Resources();
 
-    if (WorkContext.HttpContext.Request.AppRelativeCurrentExecutionFilePath == "~/")
-    {
+    if (WorkContext.HttpContext.Request.AppRelativeCurrentExecutionFilePath == "~/") {
         pageClass = "home";
+    }
+    else {
+        pageClass = "content";
     }
 }
 

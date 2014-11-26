@@ -55,14 +55,9 @@
 
 <div id="layout-main-container">
     <div id="layout-main">
-        @if (Model.AsideFirst != null) {
-        <aside id="aside-first" class="aside-first">
-            @Zone(Model.AsideFirst)
-        </aside>
-        }
         <div id="layout-content">
             @if (Model.Content != null) {
-            <div id="content" class="container">
+            <div id="content">
                 @Zone(Model.Content)
             </div>
             }

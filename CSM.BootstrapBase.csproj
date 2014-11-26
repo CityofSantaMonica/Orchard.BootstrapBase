@@ -69,7 +69,13 @@
   <ItemGroup>
     <Content Include="Content\Images\city-logo.png" />
     <Content Include="Content\Images\field.jpg" />
+    <Content Include="Content\Images\homepage-orange-bg.jpg" />
+    <Content Include="Content\Images\icon-business-license.png" />
+    <Content Include="Content\Images\icon-citations.png" />
+    <Content Include="Content\Images\icon-utility-bill.png" />
     <Content Include="Content\Images\lights.jpg" />
+    <Content Include="Content\Images\navbar-bg-alt.jpg" />
+    <Content Include="Content\Images\navbar-bg.jpg" />
     <Content Include="Scripts\bootstrap\dist\bootstrap.js" />
     <Content Include="Scripts\bootstrap\dist\bootstrap.min.js" />
     <Content Include="Scripts\bootstrap\dist\npm.js" />
@@ -124,8 +130,6 @@
     <Content Include="Styles\variables.css">
       <DependentUpon>variables.less</DependentUpon>
     </Content>
-    <Content Include="Styles\warm-colors.less" />
-    <Content Include="Styles\cool-colors.less" />
     <None Include="Views\Content-url-homepage.cshtml">
       <SubType>Code</SubType>
     </None>
@@ -244,7 +248,7 @@
     <Content Include="Views\Zone-Navigation.cshtml" />
     <Content Include="Views\Menu.cshtml" />
     <Content Include="Views\Widget-MenuWidget.cshtml" />
-    <Content Include="Views\Parts.MenuWidget-AsideSecond.cshtml" />
+    <None Include="Views\Parts.MenuWidget-AsideSecond.cshtml" />
     <Content Include="Views\Dropdown.cshtml" />
     <None Include="Views\Zone-Featured.cshtml" />
   </ItemGroup>

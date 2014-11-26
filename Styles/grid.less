@@ -12,12 +12,33 @@ body {
 
     #layout-header { }
 
-    #layout-navigation { }
+    #layout-navigation { 
+        //this is HACKish, needs to be cleaned up
 
-    #layout-featured { }
+        .navbar-header {
+            .media {
+                margin-top: 7px;
+            }
+        }
+
+        .navbar {
+            margin-bottom: 0;
+        }
+
+        .navbar-default .navbar-nav > li > a{
+            padding: 28px 16px;
+        }
+
+    }
+
+    #layout-featured { 
+        margin-bottom: @gutter;
+    }
 
     #layout-main-container {
         
+        margin-bottom: @gutter;
+
         #layout-main {
             .make-row();
 
@@ -27,17 +48,12 @@ body {
                 .widget-homepageContact {
                     .make-md-column(4);
                 }
+
+                html.home & #content {
+                    &:extend(.container);
+                }
             }
 
-            .aside-1&{
-                #aside-first {
-                    .make-md-column(4);
-                }
-                #layout-content{
-                    .make-md-column(7.5);
-                    .make-md-column-offset(0.5);
-                }
-            }
             .aside-2& {
                 #layout-content{
                     .make-md-column(7.5);
@@ -48,10 +64,16 @@ body {
                 }
             }
         }
+
+        html.content & {
+            &:extend(.container);
+        }
     }
 
     #layout-tripel-container{
-        
+        padding-bottom: @gutter;
+        margin-bottom: @gutter / 2;
+
         #layout-tripel {
             .make-row();
 
