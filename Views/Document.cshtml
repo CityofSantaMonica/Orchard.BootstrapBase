@@ -4,12 +4,18 @@
 
     string title = Convert.ToString(Model.Title);
     string siteName = Convert.ToString(WorkContext.CurrentSite.SiteName);
+    string pageClass = String.Empty;
 
     Display.Resources();
+
+    if (WorkContext.HttpContext.Request.AppRelativeCurrentExecutionFilePath == "~/")
+    {
+        pageClass = "home";
+    }
 }
 
 <!DOCTYPE html>
-<html lang="@WorkContext.CurrentCulture" class="static @Html.ClassForPage()">
+<html lang="@WorkContext.CurrentCulture" class="static @Html.ClassForPage(pageClass)">
 <head>
     <meta charset="utf-8" />
     <title>@Html.Title(title, siteName)</title>

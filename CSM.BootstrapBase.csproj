@@ -124,6 +124,8 @@
     <Content Include="Styles\variables.css">
       <DependentUpon>variables.less</DependentUpon>
     </Content>
+    <Content Include="Styles\warm-colors.less" />
+    <Content Include="Styles\cool-colors.less" />
     <None Include="Views\Content-url-homepage.cshtml">
       <SubType>Code</SubType>
     </None>

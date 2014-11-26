@@ -3,26 +3,38 @@
 
 @import "bootstrap/bootstrap.less";
 
-/** CSM.Bootstrap theme imports **/
+/** CSM.BootstrapBase theme imports **/
 
 @import "variables.less";
 @import "grid.less";
 @import "type.less";
 
 body {
-    padding-top: @navbar-height * 1.5;
+    overflow-x: hidden;
 }
 
-.navbar-header {
-    .media {
-        margin-bottom: 15px;
+#layout-navigation {
+    .navbar-header {
+        .media {
+            margin-bottom: 15px;
+        }
+    }
+
+    .navbar {
+        margin-bottom: 0;
     }
 }
 
+
 #layout-featured {
     .jumbotron {
-        background: url("../Content/Images/field.jpg") center left no-repeat;
+        background: url("../Content/Images/field.jpg") center center no-repeat;
         color: @white !important;
+
+        article {
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: @padding-base-vertical @padding-base-horizontal;
+        }
     }
 }
 
@@ -32,6 +44,10 @@ body {
 
 #aside-second {
     background-color: @yellow;
+}
+
+#layout-tripel-container {
+    background-color: @orange;
 }
 
 #tripel-first,

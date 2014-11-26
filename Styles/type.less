@@ -21,12 +21,19 @@ h1, h2, h3, h4, h5, h6,
     text-transform: uppercase;
 }
 
-.navbar-header {
-    a {
-        font-size: @font-size-large;
-        &:hover {
-            text-decoration: none;
+
+
+#layout-navigation {
+    .navbar-header {
+        a {
+            &:hover {
+                text-decoration: none;
+            }
         }
+    }
+    nav {
+        font-size: @font-size-base * 1.05;
+        font-weight: bold;
     }
 }
 
