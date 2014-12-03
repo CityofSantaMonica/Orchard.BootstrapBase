@@ -44,13 +44,17 @@ body {
 
             #layout-content {
                 .make-md-column(12);
-
-                .widget-homepageContact {
-                    .make-md-column(4);
-                }
-
+                
                 html.home & #content {
                     &:extend(.container);
+
+                    .content-item {
+                        .make-md-column(8);
+                    }
+
+                    .widget {
+                        .make-md-column(4);
+                    }
                 }
             }
 

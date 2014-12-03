@@ -24,10 +24,9 @@
             Model.Classes.Add("dropdown");
         }
 
-        if (Model.Content != null && Model.Content.ContentItem != null && Model.Content.ContentItem.ContentType == "DividerMenuItem")
+        if (Model.Content.ContentItem.ContentType == "DividerMenuItem")
         {
-            var part = Model.Content.ContentItem.DividerMenuItemPart;
-            @Display(New.MenuDividerItem(part));
+            @Display(New.MenuDividerItem(Model.Content.ContentItem));
         }
         else
         {
