@@ -130,9 +130,6 @@
     <Content Include="Styles\variables.css">
       <DependentUpon>variables.less</DependentUpon>
     </Content>
-    <None Include="Views\Content-url-homepage.cshtml">
-      <SubType>Code</SubType>
-    </None>
     <Content Include="Web.config" />
     <Content Include="Scripts\Web.config" />
     <Content Include="Styles\Web.config" />
@@ -248,7 +245,6 @@
     <Content Include="Views\Zone-Navigation.cshtml" />
     <Content Include="Views\Menu.cshtml" />
     <Content Include="Views\Widget-MenuWidget.cshtml" />
-    <None Include="Views\Parts.MenuWidget-AsideSecond.cshtml" />
     <Content Include="Views\Dropdown.cshtml" />
     <None Include="Views\Zone-Featured.cshtml" />
   </ItemGroup>
