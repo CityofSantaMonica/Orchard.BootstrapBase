@@ -3,22 +3,22 @@
 @import "variables.less";
 
 body {
-    @media @media-lg {
-       font-size: 16px;
-   }
+    @media @media-xl {
+        font-size: @font-size-base * 1.25; //~20px
+    }
 
-   @media @media-xl {
-       font-size: 18px;
-   }
-
-   @media @media-xxl {
-       font-size: 20px;
-   }
+    @media @media-xxl {
+        font-size: @font-size-base * 1.5; //~24px
+    }
 }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
     text-transform: uppercase;
+}
+
+.btn {
+    font-size: inherit;
 }
 
 #layout-navigation {
@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6,
         }
     }
     nav {
-        font-size: @font-size-base * 1.05;
+        font-size: @font-size-base * .95;
         font-weight: bold;
     }
 }
