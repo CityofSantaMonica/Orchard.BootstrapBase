@@ -8,7 +8,7 @@ body {
     }
 
     @media @media-xxl {
-        font-size: @font-size-base * 1.5; //~24px
+        font-size: @font-size-base * 1.625; //~26px
     }
 }
 
@@ -17,24 +17,64 @@ h1, h2, h3, h4, h5, h6,
     text-transform: uppercase;
 }
 
-.btn {
-    font-size: inherit;
-}
-
 #layout-navigation {
+    @multiplier: 1.1;
+
     .navbar-header {
         a {
-            font-size: @font-size-base * 1.05;
             font-weight: bold;
-            line-height: @line-height-base * 0.90;
             &:hover {
                 text-decoration: none;
+            }
+            @media @media-xl {
+                font-size: @font-size-base * @multiplier;
             }
         }
     }
     nav {
-        font-size: @font-size-base * .95;
         font-weight: bold;
+        @media @media-xl {
+            font-size: @font-size-base * @multiplier;
+        }
+    }
+
+    .dropdown-header {
+        color: darken(@teal, 15%);
+    }
+
+    .dropdown-menu > li > a {
+        color: @white;
+        @media @media-md {
+            &:hover,
+            &:focus {
+                color: @dropdown-link-color;
+            }
+        }
+    }
+}
+
+#layout-featured {
+    .jumbotron {
+        color: @white !important;
+
+        @media @media-sm {
+            h1, .h1 {
+                font-size: @font-size-base * 3;
+            }
+        }
+        @media @media-xl {
+            h1, .h1 {
+                font-size: @font-size-base * 4;
+            }
+            p {
+                font-size: @jumbotron-font-size * 1.15;
+            }
+        }
+        @media @media-xxl {
+            p {
+                font-size: @jumbotron-font-size * 1.25;
+            }
+        }
     }
 }
 
@@ -48,4 +88,8 @@ h1, h2, h3, h4, h5, h6,
 #tripel-second,
 #tripel-third {
     text-align: center;
+}
+
+.btn {
+    font-size: inherit;
 }

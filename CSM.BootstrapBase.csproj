@@ -118,18 +118,6 @@
     <Content Include="Scripts\bootstrap\tests\visual\tooltip.html" />
     <Content Include="Scripts\bootstrap\tooltip.js" />
     <Content Include="Scripts\bootstrap\transition.js" />
-    <Content Include="Styles\grid.css">
-      <DependentUpon>grid.less</DependentUpon>
-    </Content>
-    <Content Include="Styles\site.css">
-      <DependentUpon>site.less</DependentUpon>
-    </Content>
-    <Content Include="Styles\type.css">
-      <DependentUpon>type.less</DependentUpon>
-    </Content>
-    <Content Include="Styles\variables.css">
-      <DependentUpon>variables.less</DependentUpon>
-    </Content>
     <Content Include="Web.config" />
     <Content Include="Scripts\Web.config" />
     <Content Include="Styles\Web.config" />
@@ -225,21 +213,12 @@
     <Content Include="Styles\bootstrap\utilities.less" />
     <Content Include="Styles\bootstrap\variables.less" />
     <Content Include="Styles\bootstrap\wells.less" />
-    <Content Include="Styles\grid.less" />
-    <Content Include="Styles\grid.css.map">
-      <DependentUpon>grid.css</DependentUpon>
-    </Content>
+    <Content Include="Styles\layout.less" />
     <None Include="Styles\site.less" />
     <Content Include="Views\Document.cshtml" />
     <Content Include="Views\Resources.cshtml" />
     <Content Include="Views\Insertions.cshtml" />
-    <Content Include="Styles\variables.css.map">
-      <DependentUpon>variables.css</DependentUpon>
-    </Content>
     <Content Include="Styles\type.less" />
-    <Content Include="Styles\type.css.map">
-      <DependentUpon>type.css</DependentUpon>
-    </Content>
     <Content Include="Views\MenuItem.cshtml" />
     <Content Include="Views\MenuItemLink.cshtml" />
     <Content Include="Views\Zone-Navigation.cshtml" />
@@ -256,11 +235,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\BadgeOfHonor.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Styles\site.css.map">
-      <DependentUpon>site.css</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

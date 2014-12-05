@@ -6,11 +6,11 @@
 @gutter: @jumbotron-padding;
 
 // Break points
-@screen-sm-min: 47.95em; // ~768px
-@screen-md-min: 57.8em; // ~940px
-@screen-lg-min: 68.6em; // ~1100px
-@screen-xl-min: 87.4em; // ~1400px
-@screen-xxl-min: 99.9em; // ~1600px
+@screen-sm-min: 48em; // ~768px
+@screen-md-min: 58.75em; // ~940px
+@screen-lg-min: 68.75em; // ~1100px
+@screen-xl-min: 87.5em; // ~1400px
+@screen-xxl-min: 120em; // ~1920px
 
 // Media query shortcuts
 // The tilde is needed so the quotes won't be printed
@@ -32,6 +32,8 @@
 
 //grid
 @grid-float-breakpoint: @screen-md-min;
+@container-xl: 1360px;
+@container-xxl: 1440px;
 
 //nav
 @navbar-height: 54px;
@@ -43,7 +45,15 @@
 @navbar-default-link-active-bg: darken(@teal, 16.5%);
 
 //type
-@font-family-base: aktiv-grotesk-std;
 @font-size-base: 16px;
+@font-size-h1: floor((@font-size-base * 2.25)); // ~36px
+@font-size-h2: floor((@font-size-base * 1.875)); // ~30px
+@font-size-h3: ceil((@font-size-base * 1.5)); // ~24px
+@font-size-h4: ceil((@font-size-base * 1.125)); // ~18px
+@font-size-h5: @font-size-base;
+@font-size-h6: ceil((@font-size-base * 0.75)); // ~12px
+@jumbotron-font-size: ceil((@font-size-base * 1.3125)); //~21px
+
+@font-family-base: aktiv-grotesk-std;
 @headings-font-family: abril-titling-condensed;
 @headings-color: darken(@teal, 10%);

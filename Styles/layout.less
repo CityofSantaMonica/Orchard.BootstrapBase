@@ -1,0 +1,159 @@
+﻿/** CSM.Bootstrap: grid system layout **/
+
+@import "variables.less";
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+#layout-wrapper {
+
+    margin: 0 auto;
+
+    #layout-header { }
+
+    #layout-navigation { 
+
+        .zone-navigation > div {
+            > header {
+                .media { 
+                    @margin: 12px;
+                    margin-top: @margin;
+                    margin-bottom: @margin;
+                    margin-left: @margin / 2;
+                    @media @media-md {
+                        margin-bottom: 0px;
+                        margin-left: 0px;
+                    }
+                }
+                .navbar-toggle {
+                    @margin: 20px;
+                    margin-top: @margin;
+                    margin-bottom: @margin;
+                }
+            }
+            > nav > ul {
+                @top-pad: 24px;
+                @side-pad: 16px;
+                > li:first-child > a {
+                    @media @media-md {
+                        margin-left: -@side-pad;
+                    }
+                    @media @media-lg {
+                        margin-left: 0px;
+                    }
+                }
+                > li {
+                    > a {
+                        padding: @top-pad @side-pad;
+                        @media @media-xl {
+                            padding: floor(@top-pad * 1.166) @side-pad * 1.25
+                        }
+                        @media @media-xxl {
+                            padding: floor(@top-pad * 1.5) @side-pad * 1.25
+                        }
+                    }
+                    > .dropdown-menu {
+                        padding-top: 0px;
+                    }
+                }
+            }
+        }
+
+        .navbar {
+            margin-bottom: 0;
+            @media @media-xxl {
+                min-height: @navbar-height * 1.25;
+            }
+        }
+    }
+
+    #layout-featured { 
+        margin-bottom: @gutter;
+        
+        .jumbotron {
+            margin-bottom: 0;
+        }
+        article {
+            padding: @padding-base-vertical @padding-base-horizontal;
+        }
+    }
+
+    #layout-main-container {
+        
+        margin-bottom: @gutter;
+
+        #layout-main {
+            .make-row();
+
+            #layout-content {
+                .make-md-column(12);
+                
+                html.home & #content {
+                    &:extend(.container);
+
+                    .content-item {
+                        .make-md-column(8);
+                    }
+                    .widget {
+                        .make-md-column(4);
+                    }
+                }
+            }
+
+            .aside-2& {
+                #layout-content{
+                    .make-md-column(7.5);
+                }
+                #aside-second {
+                    .make-md-column-offset(0.5);
+                    .make-md-column(4);
+                }
+            }
+        }
+
+        html.content & {
+            &:extend(.container);
+        }
+    }
+
+    #layout-tripel-container{
+        padding-bottom: @gutter;
+        margin-bottom: @gutter / 2;
+
+        #layout-tripel {
+            .make-row();
+
+            #tripel-first,
+            #tripel-second,
+            #tripel-third {
+                .make-md-column(4);
+            }
+        }
+
+        .widget-html-widget {
+            @baseline: 63px;
+
+            margin-top: @baseline / 2;
+
+            > header {
+                padding-top: @baseline * 2;
+                background-size: @baseline * 2 @baseline * 2;
+            }
+        }
+    }
+
+    #layout-footer {
+        #footer { }
+    }
+}
+
+.container {
+    @media @media-xl {
+        width: @container-xl;
+    }
+    @media @media-xxl {
+        width: @container-xxl;
+    }
+}

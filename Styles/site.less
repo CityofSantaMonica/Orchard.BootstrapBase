@@ -6,26 +6,37 @@
 /** CSM.BootstrapBase theme imports **/
 
 @import "variables.less";
-@import "grid.less";
+@import "layout.less";
 @import "type.less";
-
-body {
-    overflow-x: hidden;
-}
 
 #layout-navigation {
     background: url("../Content/Images/navbar-bg-alt.jpg") top left repeat;
+
+    .navbar-nav .open .dropdown-menu {
+        background-color: lighten(@teal, 20%);
+    }
+
+    .navbar-toggle {
+        border-color: @navbar-default-toggle-border-color;
+        .icon-bar {
+          background-color: @navbar-default-toggle-border-color;
+        }
+        &:hover,
+        &:focus {
+          background-color: @navbar-default-toggle-hover-bg;
+          .icon-bar {
+              background-color: @navbar-default-toggle-icon-bar-bg;
+          }
+        }
+    }
 }
 
 #layout-featured {
     .jumbotron {
         background: url("../Content/Images/field.jpg") center center no-repeat;
-        color: @white !important;
-        margin-bottom: 0;
 
         article {
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: @padding-base-vertical @padding-base-horizontal;
+            background-color: rgba(0, 0, 0, 0.55);
         }
     }
 }
@@ -56,17 +67,6 @@ body {
     .widget-homepageWaterBill {
         > header {
             background: url("../Content/Images/icon-utility-bill.png") no-repeat top center;
-        }
-    }
-
-    .widget-html-widget {
-        @baseline: 63px;
-
-        margin-top: @baseline / 2;
-
-        > header {
-            padding-top: @baseline * 2;
-            background-size: @baseline * 2 @baseline * 2;
         }
     }
 }
