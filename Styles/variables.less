@@ -23,6 +23,7 @@
 //colors
 @white: #ffffff;
 @teal: #5d8880;
+@dark-teal: darken(@teal, 10%);
 @orange: #fae2a8;
 @olive: #dce5be;
 @yellow: #fbf5b5;
@@ -40,9 +41,9 @@
 @navbar-default-bg: transparent;
 @navbar-default-link-color: @white;
 @navbar-default-link-hover-color: @white;
-@navbar-default-link-hover-bg: darken(@teal, 16.5%);
+@navbar-default-link-hover-bg: @dark-teal;
 @navbar-default-link-active-color: @white;
-@navbar-default-link-active-bg: darken(@teal, 16.5%);
+@navbar-default-link-active-bg: @dark-teal;
 
 //type
 @font-size-base: 16px;
@@ -56,4 +57,4 @@
 
 @font-family-base: aktiv-grotesk-std;
 @headings-font-family: abril-titling-condensed;
-@headings-color: darken(@teal, 10%);
+@headings-color: @dark-teal;

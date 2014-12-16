@@ -11,9 +11,10 @@
 
 #layout-navigation {
     background: url("../Content/Images/navbar-bg-alt.jpg") top left repeat;
+    border-bottom: solid 5px @dark-teal;
 
     .navbar-nav .open .dropdown-menu {
-        background-color: lighten(@teal, 20%);
+        background-color: @navbar-default-link-active-bg;
     }
 
     .navbar-toggle {
@@ -23,7 +24,7 @@
         }
         &:hover,
         &:focus {
-          background-color: @navbar-default-toggle-hover-bg;
+          background-color: @teal;
           .icon-bar {
               background-color: @navbar-default-toggle-icon-bar-bg;
           }
@@ -33,7 +34,7 @@
 
 #layout-featured {
     .jumbotron {
-        background: url("../Content/Images/field.jpg") center center no-repeat;
+        background: url("../Content/Images/beach.jpg") center center no-repeat;
 
         article {
             background-color: rgba(0, 0, 0, 0.55);

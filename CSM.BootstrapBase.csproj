@@ -67,6 +67,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Images\beach.jpg" />
     <Content Include="Content\Images\city-logo.png" />
     <Content Include="Content\Images\field.jpg" />
     <Content Include="Content\Images\homepage-orange-bg.jpg" />
