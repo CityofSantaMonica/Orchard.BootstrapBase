@@ -10,64 +10,21 @@
 @import "type.less";
 
 #layout-navigation {
-    background: url("../Content/Images/navbar-bg-alt.jpg") top left repeat;
-    border-bottom: solid 5px @dark-teal;
-
-    .navbar-nav .open .dropdown-menu {
-        background-color: @navbar-default-link-active-bg;
-    }
-
-    .navbar-toggle {
-        border-color: @navbar-default-toggle-border-color;
-        .icon-bar {
-          background-color: @navbar-default-toggle-border-color;
-        }
-        &:hover,
-        &:focus {
-          background-color: @teal;
-          .icon-bar {
-              background-color: @navbar-default-toggle-icon-bar-bg;
-          }
-        }
-    }
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
 }
 
 #layout-featured {
-    .jumbotron {
-        background: url("../Content/Images/beach.jpg") center center no-repeat;
-
-        article {
-            background-color: rgba(0, 0, 0, 0.55);
-        }
-    }
 }
 
 #layout-content {
-    background-color: @white;
+
 }
 
 #aside-second {
-    background-color: @yellow;
+
 }
 
 #layout-tripel-container {
-    background: url("../Content/Images/homepage-orange-bg.jpg") top left repeat;
 
-    .widget-homepageBusinessLicenseRenewal {
-        > header{
-            background: url("../Content/Images/icon-business-license.png") no-repeat top center;
-        }
-    }
-
-    .widget-homepageCitationInformation {
-        > header {
-            background: url("../Content/Images/icon-citations.png") no-repeat top center;
-        }
-    }
-
-    .widget-homepageWaterBill {
-        > header {
-            background: url("../Content/Images/icon-utility-bill.png") no-repeat top center;
-        }
-    }
 }

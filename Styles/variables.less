@@ -1,7 +1,7 @@
 ﻿@import "bootstrap/variables.less";
 @import "bootstrap/mixins.less";
 
-/** CSM.Bootstrap: variable definitions and overrides **/
+/** CSM.BootstrapBase: variable definitions and overrides **/
 
 @gutter: @jumbotron-padding;
 
@@ -20,15 +20,6 @@
 @media-xl: ~"only screen and (min-width: @{screen-xl-min})"; 
 @media-xxl: ~"only screen and (min-width: @{screen-xxl-min})";
 
-//colors
-@white: #ffffff;
-@teal: #5d8880;
-@dark-teal: darken(@teal, 10%);
-@orange: #fae2a8;
-@olive: #dce5be;
-@yellow: #fbf5b5;
-@seafoam: #b0dab9;
-
 // Bootstrap overrides
 
 //grid
@@ -38,12 +29,6 @@
 
 //nav
 @navbar-height: 54px;
-@navbar-default-bg: transparent;
-@navbar-default-link-color: @white;
-@navbar-default-link-hover-color: @white;
-@navbar-default-link-hover-bg: @dark-teal;
-@navbar-default-link-active-color: @white;
-@navbar-default-link-active-bg: @dark-teal;
 
 //type
 @font-size-base: 16px;
@@ -54,7 +39,3 @@
 @font-size-h5: @font-size-base;
 @font-size-h6: ceil((@font-size-base * 0.75)); // ~12px
 @jumbotron-font-size: ceil((@font-size-base * 1.3125)); //~21px
-
-@font-family-base: aktiv-grotesk-std;
-@headings-font-family: abril-titling-condensed;
-@headings-color: @dark-teal;

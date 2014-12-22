@@ -1,4 +1,4 @@
-﻿/** CSM.Bootstrap: typography, fonts, colors, etc **/
+﻿/** CSM.BootstrapBase: typography, fonts, colors, etc **/
 
 @import "variables.less";
 
@@ -37,26 +37,10 @@ h1, h2, h3, h4, h5, h6,
             font-size: @font-size-base * @multiplier;
         }
     }
-
-    .dropdown-header {
-        color: @orange;
-    }
-
-    .dropdown-menu > li > a {
-        color: @white;
-        @media @media-md {
-            &:hover,
-            &:focus {
-                color: @dropdown-link-color;
-            }
-        }
-    }
 }
 
 #layout-featured {
     .jumbotron {
-        color: @white !important;
-
         @media @media-sm {
             h1, .h1 {
                 font-size: @font-size-h1 * 1.5;

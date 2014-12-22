@@ -67,16 +67,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Images\beach.jpg" />
     <Content Include="Content\Images\city-logo.png" />
-    <Content Include="Content\Images\field.jpg" />
-    <Content Include="Content\Images\homepage-orange-bg.jpg" />
-    <Content Include="Content\Images\icon-business-license.png" />
-    <Content Include="Content\Images\icon-citations.png" />
-    <Content Include="Content\Images\icon-utility-bill.png" />
-    <Content Include="Content\Images\lights.jpg" />
-    <Content Include="Content\Images\navbar-bg-alt.jpg" />
-    <Content Include="Content\Images\navbar-bg.jpg" />
     <Content Include="Scripts\bootstrap\dist\bootstrap.js" />
     <Content Include="Scripts\bootstrap\dist\bootstrap.min.js" />
     <Content Include="Scripts\bootstrap\dist\npm.js" />
