@@ -217,6 +217,10 @@
     <Content Include="Views\Menu.cshtml" />
     <Content Include="Views\Widget-MenuWidget.cshtml" />
     <Content Include="Views\Dropdown.cshtml" />
+    <Content Include="Views\Analytics.cshtml" />
+    <Content Include="Views\Typekit.cshtml" />
+    <Content Include="Views\AdditionalInsertions.cshtml" />
+    <Content Include="Views\AdditionalResources.cshtml" />
     <None Include="Views\Zone-Featured.cshtml" />
   </ItemGroup>
   <ItemGroup>

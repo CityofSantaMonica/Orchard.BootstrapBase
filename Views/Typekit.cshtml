@@ -1,0 +1,10 @@
+﻿
+@if (!String.IsNullOrEmpty(Model.TypekitId))
+{
+    Script.Include(String.Format("//use.typekit.net/{0}.js", Model.TypekitId)).AtHead();
+    
+    using (Script.Head())
+    {
+        <script>try { Typekit.load(); } catch (e) { }</script>
+    }
+}

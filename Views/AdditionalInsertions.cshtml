@@ -1,0 +1,14 @@
+﻿@{
+    //additional "Ad-hoc" shape insertions should go in this file
+    //see http://weblogs.asp.net/bleroy/creating-shapes-on-the-fly for more info
+
+    //Child themes should override this file to include any custom ad-hoc shapes
+}
+
+@{
+    //child themes can provide a tracking ID for a Google Analytics profile to have the Global Tracking scripts injected
+    Display.Analytics(TrackingId: "");
+    
+    //child themes can provide a typekit id to have typekit fonts injected
+    Display.Typekit(TypekitId: "");
+}
