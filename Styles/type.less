@@ -2,12 +2,6 @@
 
 @import "variables.less";
 
-body {
-    @media @media-xl {
-        font-size: @font-size-base * 1.25; //~20px
-    }
-}
-
 #layout-navigation {
     @multiplier: 1.1;
 
@@ -31,26 +25,20 @@ body {
 }
 
 #layout-featured {
-    .jumbotron {
-        @media @media-sm {
-            h1, .h1 {
-                font-size: @font-size-h1 * 1.5;
-            }
-        }
-        @media @media-xl {
-            h1, .h1 {
-                font-size: @font-size-h1 * 1.5;
-            }
-        }
-    }
 }
 
 #aside-second {
-    .dropdown-header {
-        font-size: @font-size-h3;
-    }
 }
 
 .btn {
     font-size: inherit;
+}
+
+@media screen and (min-width: @screen-sm-min) {
+    .jumbotron {
+        h1,
+        .h1 {
+            font-size: (@font-size-base * 1.75);
+        }
+    }
 }
