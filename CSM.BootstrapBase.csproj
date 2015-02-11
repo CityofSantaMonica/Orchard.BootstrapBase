@@ -129,9 +129,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\NavbarHeader.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Scripts\bootstrap\.jscsrc" />
     <Content Include="Scripts\bootstrap\.jshintrc" />
     <Content Include="Scripts\bootstrap\tests\unit\.jshintrc" />

@@ -3,7 +3,22 @@
 <div class="zone zone-navigation navbar navbar-default">
     <div class="container">
         <header class="navbar-header">
-            @Display(New.NavbarHeader())
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="media">
+                <a href="http://www.smgov.net" target="_blank" class="media-left media-center">
+                    <img class="media-object" src="~/Themes/CSM.BootstrapBase/Content/Images/city-logo.png" alt="City logo" />
+                </a>
+                <a href="@Href("~/")" class="navbar-link media-body media-center">
+                    City of Santa Monica
+                    <br />
+                    @WorkContext.CurrentSite.SiteName
+                </a>
+            </div>
         </header>
         <nav class="collapse navbar-collapse" id="navbar-collapse">
             @foreach (var item in CoreShapes.Order(Model.Items))
