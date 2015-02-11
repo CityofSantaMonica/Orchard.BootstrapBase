@@ -18,6 +18,14 @@
             Href = Url.Content(theme.Location + "/" + theme.Path + "/Images/" + "favicon.ico")
         }
     );
+    
+    //font-awesome CDN
+    RegisterLink(
+        new LinkEntry {
+            Rel = "stylesheet",
+            Href = "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+        }
+    );
 
     SetMeta(
         new MetaEntry {
