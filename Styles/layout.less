@@ -97,13 +97,32 @@ body {
                 }
             }
 
-            .aside-2& {
+            .aside-1&, .aside-2& {
                 #layout-content{
                     .make-md-column(7.5);
                 }
+            }
+            .aside-1& {
+                #aside-first {
+                    .make-md-column-offset(0.5);
+                    .make-md-column(4);
+                }
+            }
+            .aside-2& {
                 #aside-second {
                     .make-md-column-offset(0.5);
                     .make-md-column(4);
+                }
+            }
+            .aside-12& {
+                #aside-first {
+                    .make-md-column(2);
+                }
+                #layout-content{
+                    .make-md-column(7);
+                }
+                #aside-second {
+                    .make-md-column(3);
                 }
             }
         }
