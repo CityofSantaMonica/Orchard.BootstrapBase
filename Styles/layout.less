@@ -84,17 +84,6 @@ body {
 
             #layout-content {
                 .make-md-column(12);
-                
-                html.home & #content {
-                    &:extend(.container);
-
-                    .content-item {
-                        .make-md-column(8);
-                    }
-                    .widget {
-                        .make-md-column(4);
-                    }
-                }
             }
 
             .aside-1&, .aside-2& {
@@ -127,9 +116,7 @@ body {
             }
         }
 
-        html.content & {
-            &:extend(.container);
-        }
+        &:extend(.container);
     }
 
     #layout-tripel-container{
