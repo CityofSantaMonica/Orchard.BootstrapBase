@@ -9,11 +9,19 @@
     }
 
     > input,
+    > select,
     > textarea {
         &:extend(.form-control);
     }
 
     > textarea {
         height: auto;
+    }
+}
+
+.dynamic-form {
+    .validation-summary-errors {
+        &:extend(.alert);
+        &:extend(.alert-danger);
     }
 }
