@@ -219,6 +219,9 @@
     <Content Include="Views\Typekit.cshtml" />
     <Content Include="Views\AdditionalInsertions.cshtml" />
     <Content Include="Views\AdditionalResources.cshtml" />
+    <Content Include="Views\Elements\Grid.cshtml" />
+    <Content Include="Views\Elements\Column.cshtml" />
+    <Content Include="Views\Parts.Layout.cshtml" />
     <None Include="Views\Zone-Featured.cshtml" />
   </ItemGroup>
   <ItemGroup>
