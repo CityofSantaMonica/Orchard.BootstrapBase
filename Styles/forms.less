@@ -1,0 +1,19 @@
+﻿/* Bootstrap styles for Orchard.DynamicForms */
+
+.form-field-element {
+    &:extend(.form-group);
+
+    > button {
+        &:extend(.btn);
+        &:extend(.btn-default);
+    }
+
+    > input,
+    > textarea {
+        &:extend(.form-control);
+    }
+
+    > textarea {
+        height: auto;
+    }
+}

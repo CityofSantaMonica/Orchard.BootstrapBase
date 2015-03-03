@@ -204,6 +204,7 @@
     <Content Include="Styles\bootstrap\wells.less" />
     <Content Include="Styles\layout.less" />
     <Content Include="Styles\navbar.less" />
+    <Content Include="Styles\forms.less" />
     <None Include="Styles\site.less" />
     <Content Include="Views\Document.cshtml" />
     <Content Include="Views\Resources.cshtml" />
