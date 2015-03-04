@@ -5,7 +5,11 @@
 
     > button {
         &:extend(.btn);
-        &:extend(.btn-default);
+        &:extend(.btn-primary);
+
+        &:hover {
+            &:extend(.btn-primary:hover);
+        }
     }
 
     > input,
