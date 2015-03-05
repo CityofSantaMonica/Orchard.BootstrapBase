@@ -1,1 +1,5 @@
-﻿@Display(Model.LayoutRoot)
+﻿@if (Model.LayoutRoot != null) {
+<div class="orchard-layouts-root">
+    @Display(Model.LayoutRoot)
+</div>
+}
