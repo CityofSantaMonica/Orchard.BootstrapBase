@@ -5,10 +5,10 @@
     var element = (Column) Model.Element;
     var columnSpan = element.Width;
     var columnOffset = element.Offset;
-    var columnOffsetCss = columnOffset > 0 ? "col-md-offset-" + columnOffset : default(string);
+    var columnOffsetCss = columnOffset > 0 ? String.Format("col-md-offset-{0}", columnOffset) : default(string);
     var tagBuilder = TagBuilderExtensions.AddCommonElementAttributes(new OrchardTagBuilder("div"), Model);
 
-    tagBuilder.AddCssClass(String.Concat("col-md-", columnSpan));
+    tagBuilder.AddCssClass(String.Format("col-md-{0}", columnSpan));
     tagBuilder.AddCssClass(columnOffsetCss);
 }
 @tagBuilder.StartElement
