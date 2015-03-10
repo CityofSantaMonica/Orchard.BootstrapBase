@@ -34,18 +34,18 @@
 }
 @tag.StartElement
 
+@if (Model.Navigation != null) {
+<div id="layout-navigation">
+    @Zone(Model.Navigation)
+</div>
+}
+
 @if (Model.Header != null) {
 <header id="layout-header">
     <div id="header">
         @Zone(Model.Header)
     </div>
 </header>
-}
-
-@if (Model.Navigation != null) {
-<div id="layout-navigation">
-    @Zone(Model.Navigation)
-</div>
 }
 
 @if (Model.Featured != null) {
@@ -55,7 +55,7 @@
 }
 
 @if (Model.AsideFirst != null || Model.Content != null || Model.AsideSecond != null) {
-<div id="layout-main-container">
+<div id="layout-main-container" class="container">
     <div id="layout-main">
         @if (Model.AsideFirst != null) {
         <aside id="aside-first" class="aside-first">
@@ -80,26 +80,26 @@
 }
 
 @if (Model.TripelFirst != null || Model.TripelSecond != null || Model.TripelThird != null) {
-<div id="layout-tripel-container">
-    <div id="layout-tripel">
-        @* as in beer *@
-        @if (Model.TripelFirst != null) {
-        <div id="tripel-first">
-            @Zone(Model.TripelFirst)
+    <div id="layout-tripel-container" class="container">
+        <div id="layout-tripel">
+            @* as in beer *@
+            @if (Model.TripelFirst != null) {
+                <div id="tripel-first">
+                    @Zone(Model.TripelFirst)
+                </div>
+            }
+            @if (Model.TripelSecond != null) {
+                <div id="tripel-second">
+                    @Zone(Model.TripelSecond)
+                </div>
+            }
+            @if (Model.TripelThird != null) {
+                <div id="tripel-third">
+                    @Zone(Model.TripelThird)
+                </div>
+            }
         </div>
-        }
-        @if (Model.TripelSecond != null) {
-        <div id="tripel-second">
-            @Zone(Model.TripelSecond)
-        </div>
-        }
-        @if (Model.TripelThird != null) {
-        <div id="tripel-third">
-            @Zone(Model.TripelThird)
-        </div>
-        }
     </div>
-</div>
 }
 
 @if (Model.Footer != null) {

@@ -8,9 +8,17 @@
 @import "variables.less";
 @import "layout.less";
 @import "navbar.less";
-@import "type.less";
 @import "forms.less";
 
 img {
     max-width: 100%;
+}
+
+@media screen and (min-width: @screen-sm-min) {
+    .jumbotron {
+        h1,
+        .h1 {
+            font-size: (@font-size-base * 1.75);
+        }
+    }
 }

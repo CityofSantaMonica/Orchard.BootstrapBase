@@ -110,6 +110,36 @@
     <Content Include="Scripts\bootstrap\tests\visual\tooltip.html" />
     <Content Include="Scripts\bootstrap\tooltip.js" />
     <Content Include="Scripts\bootstrap\transition.js" />
+    <Content Include="Styles\forms.css">
+      <DependentUpon>forms.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\forms.min.css">
+      <DependentUpon>forms.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\layout.css">
+      <DependentUpon>layout.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\layout.min.css">
+      <DependentUpon>layout.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\navbar.css">
+      <DependentUpon>navbar.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\navbar.min.css">
+      <DependentUpon>navbar.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\site.css">
+      <DependentUpon>site.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\site.min.css">
+      <DependentUpon>site.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\variables.css">
+      <DependentUpon>variables.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\variables.min.css">
+      <DependentUpon>variables.css</DependentUpon>
+    </Content>
     <Content Include="Web.config" />
     <Content Include="Scripts\Web.config" />
     <Content Include="Styles\Web.config" />
@@ -209,7 +239,6 @@
     <Content Include="Views\Document.cshtml" />
     <Content Include="Views\Resources.cshtml" />
     <Content Include="Views\Insertions.cshtml" />
-    <Content Include="Styles\type.less" />
     <Content Include="Views\MenuItem.cshtml" />
     <Content Include="Views\MenuItemLink.cshtml" />
     <Content Include="Views\Zone-Navigation.cshtml" />

@@ -20,7 +20,7 @@
 @media-xl: ~"only screen and (min-width: @{screen-xl-min})"; 
 @media-xxl: ~"only screen and (min-width: @{screen-xxl-min})";
 
-@white: #fff;
+//colors
 
 //similar to Bootstrap built-in @brand-primary, @brand-success, etc.
 //the default is a 90-degree offset (on the color wheel) from @brand-primary
@@ -32,7 +32,28 @@
 @btn-secondary-bg: @brand-secondary;
 @btn-secondary-border: darken(@btn-secondary-bg, 5%);
 
-// Bootstrap overrides
+@brand-primary-dark: darken(@brand-primary, 10%);
+
+@white: #fff;
+
+@page-bg: transparent;
+
+@navbar-default-bg: @brand-primary;
+@navbar-default-link-color: @white;
+@navbar-default-link-hover-color: @white;
+@navbar-default-link-hover-bg: @brand-primary-dark;
+@navbar-default-link-active-color: @white;
+@navbar-default-link-active-bg: @brand-primary-dark;
+@navbar-border-bottom-color: @brand-secondary;
+
+@aside-first-bg: @gray-lighter;
+@content-bg: transparent;
+@aside-second-bg: @gray-lighter;
+
+@tripel-container-bg: @gray-lighter;
+
+@footer-bg: transparent;
+@footer-top-border-color: @navbar-border-bottom-color;
 
 //grid
 @grid-float-breakpoint: @screen-md-min;
@@ -44,10 +65,10 @@
 
 //type
 @font-size-base: 16px;
-@font-size-h1: ceil((24 / @font-size-base) * @font-size-base); // ~24px
-@font-size-h2: ceil((21 / @font-size-base) * @font-size-base); // ~21px
-@font-size-h3: ceil((18 / @font-size-base) * @font-size-base); // ~18px
-@font-size-h4: ceil((16 / @font-size-base) * @font-size-base); // ~16px
+@font-size-h1: 24px;
+@font-size-h2: 21px;
+@font-size-h3: 18px;
+@font-size-h4: 16px;
 @font-size-h5: @font-size-base;
 @font-size-h6: @font-size-base;
-@jumbotron-font-size: ceil((21 / @font-size-base) * @font-size-base); //~21px
+@jumbotron-font-size: 21px; //~21px

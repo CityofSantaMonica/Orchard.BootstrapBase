@@ -3,10 +3,108 @@
 #layout-navigation {
     border-bottom-style: solid;
     border-bottom-width: 5px;
-}
+    border-bottom-color: @navbar-border-bottom-color;
 
-.navbar {
-    @media (min-width: @grid-float-breakpoint) {
-        border-radius: 0;
+    .navbar {
+        @media (min-width: @grid-float-breakpoint) {
+            border-radius: 0;
+        }
+
+        margin-bottom: 0;
+
+        @media @media-xxl {
+            min-height: @navbar-height * 1.25;
+        }
+
+        header {
+            .navbar-toggle {
+                margin-top: 20px;
+                margin-bottom: 20px;
+                border-color: @navbar-default-toggle-border-color;
+                .icon-bar {
+                  background-color: @navbar-default-toggle-border-color;
+                }
+                &:hover,
+                &:focus {
+                  background-color: @navbar-default-link-hover-color;
+                  .icon-bar {
+                      background-color: @navbar-default-toggle-icon-bar-bg;
+                  }
+                }
+            }
+
+            .media {
+                margin-top: 11px;
+                @media @media-xxl {
+                    margin-top: 20px;
+                }
+
+                a {
+                    font-weight: bold;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+
+                    @media @media-xl {
+                        font-size: @font-size-base * 1.1;
+                    }
+                }
+            }
+        }
+
+        nav {
+            font-weight: bold;
+
+            @media @media-xl {
+                font-size: @font-size-base * 1.1;
+            }
+
+            ul.navbar-nav {
+                @top-pad: 24px;
+                @side-pad: 16px;
+                > li:first-child > a {
+                    @media @media-md {
+                        margin-left: -@side-pad;
+                    }
+                    @media @media-lg {
+                        margin-left: 0;
+                    }
+                }
+                > li {
+                    > a {
+                        padding: @top-pad @side-pad;
+                        @media @media-xl {
+                            padding: floor(@top-pad * 1.166) @side-pad * 1.25
+                        }
+                        @media @media-xxl {
+                            padding: floor(@top-pad * 1.5) @side-pad * 1.25
+                        }
+                    }
+                    > .dropdown-menu {
+                        padding-top: 0;
+
+                        .dropdown-header {
+                            color: @dropdown-header-color;
+                        }
+
+                        > li > a {
+                            color: @white;
+                            @media @media-md {
+                                &:hover,
+                                &:focus {
+                                    color: @dropdown-link-color;
+                                }
+                            }
+                        }
+                    }
+                }
+                > li.open {
+                    > .dropdown-menu {
+                        background-color: @navbar-default-link-active-bg;
+                    }
+                }
+            }
+        }
     }
 }
