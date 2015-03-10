@@ -20,6 +20,18 @@
 @media-xl: ~"only screen and (min-width: @{screen-xl-min})"; 
 @media-xxl: ~"only screen and (min-width: @{screen-xxl-min})";
 
+@white: #fff;
+
+//similar to Bootstrap built-in @brand-primary, @brand-success, etc.
+//the default is a 90-degree offset (on the color wheel) from @brand-primary
+//should probably be overridden in a base theme
+@brand-secondary: spin(@brand-primary, 90);
+
+//setup some useful variables ala Bootstrap for the @brand-secondary
+@btn-secondary-color: @white;
+@btn-secondary-bg: @brand-secondary;
+@btn-secondary-border: darken(@btn-secondary-bg, 5%);
+
 // Bootstrap overrides
 
 //grid

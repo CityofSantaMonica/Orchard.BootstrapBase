@@ -1,4 +1,4 @@
-﻿/* Bootstrap styles for Orchard.DynamicForms */
+﻿@import "variables.less";
 
 .form-field-element {
     &:extend(.form-group);
@@ -28,4 +28,8 @@
         &:extend(.alert);
         &:extend(.alert-danger);
     }
+}
+
+.btn-secondary {
+    .button-variant(@btn-secondary-color, @btn-secondary-bg, @btn-secondary-border);
 }
