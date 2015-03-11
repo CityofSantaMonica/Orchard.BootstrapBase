@@ -3,31 +3,14 @@
 
 /** CSM.BootstrapBase: variable definitions and overrides **/
 
-@gutter: @jumbotron-padding;
+// In many cases, creating a child theme based on CSM.BootstrapBase
+// can be as simple as overriding selected variables,
+// both those defined as part of the Bootstrap distribution
+// and custom variables defined by this theme.
 
-// Break points
-@screen-sm-min: 48em; // ~768px
-@screen-md-min: 58.75em; // ~940px
-@screen-lg-min: 68.75em; // ~1100px
-@screen-xl-min: 87.5em; // ~1400px
-@screen-xxl-min: 120em; // ~1920px
+// == Colors
 
-// Media query shortcuts
-// The tilde is needed so the quotes won't be printed
-@media-sm: ~"only screen and (min-width: @{screen-sm-min})";
-@media-md: ~"only screen and (min-width: @{screen-md-min})"; 
-@media-lg: ~"only screen and (min-width: @{screen-lg-min})";
-@media-xl: ~"only screen and (min-width: @{screen-xl-min})"; 
-@media-xxl: ~"only screen and (min-width: @{screen-xxl-min})";
-
-//colors
-
-//similar to Bootstrap built-in @brand-primary, @brand-success, etc.
-//the default is a 90-degree offset (on the color wheel) from @brand-primary
-//should probably be overridden in a base theme
 @brand-secondary: spin(@brand-primary, 90);
-
-//setup some useful variables ala Bootstrap for the @brand-secondary
 @btn-secondary-color: @white;
 @btn-secondary-bg: @brand-secondary;
 @btn-secondary-border: darken(@btn-secondary-bg, 5%);
@@ -36,7 +19,9 @@
 
 @white: #fff;
 
-@page-bg: transparent;
+//colors for various zones of the page
+
+@body-bg: transparent;
 
 @navbar-default-bg: @brand-primary;
 @navbar-default-link-color: @white;
@@ -52,18 +37,39 @@
 
 @tripel-container-bg: @gray-lighter;
 
-@footer-bg: transparent;
+@footer-bg: @navbar-default-bg;
 @footer-top-border-color: @navbar-border-bottom-color;
+@footer-text-color: @navbar-default-link-color;
 
-//grid
+// == Layout related
+
+// breakpoints
+@screen-sm-min: 48em; // ~768px
+@screen-md-min: 58.75em; // ~940px
+@screen-lg-min: 68.75em; // ~1100px
+@screen-xl-min: 87.5em; // ~1400px
+@screen-xxl-min: 120em; // ~1920px
+
+//media query shortcuts, use like:
+//  @media @media-md { /* styles */ }
+
+//tilde is needed so the quotes won't be printed
+@media-sm: ~"only screen and (min-width: @{screen-sm-min})";
+@media-md: ~"only screen and (min-width: @{screen-md-min})"; 
+@media-lg: ~"only screen and (min-width: @{screen-lg-min})";
+@media-xl: ~"only screen and (min-width: @{screen-xl-min})"; 
+@media-xxl: ~"only screen and (min-width: @{screen-xxl-min})";
+
+@gutter: @jumbotron-padding;
+
 @grid-float-breakpoint: @screen-md-min;
+
 @container-xl: 1360px;
 @container-xxl: 1440px;
 
-//nav
 @navbar-height: 54px;
 
-//type
+// == Type
 @font-size-base: 16px;
 @font-size-h1: 24px;
 @font-size-h2: 21px;
@@ -71,4 +77,4 @@
 @font-size-h4: 16px;
 @font-size-h5: @font-size-base;
 @font-size-h6: @font-size-base;
-@jumbotron-font-size: 21px; //~21px
+@jumbotron-font-size: 21px;
