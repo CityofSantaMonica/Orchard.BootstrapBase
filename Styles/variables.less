@@ -25,13 +25,14 @@
 
 @layout-wrapper-bg: transparent;
 
-//overriding Bootstrap's navbar-default styles
+//overriding Bootstrap's @navbar-default-* styles
 @navbar-default-bg: @brand-primary;
 @navbar-default-link-color: @white;
 @navbar-default-link-hover-color: @white;
 @navbar-default-link-hover-bg: @brand-primary-dark;
 @navbar-default-link-active-color: @white;
 @navbar-default-link-active-bg: @brand-primary-dark;
+
 @navbar-border-bottom-color: @brand-secondary;
 
 @aside-first-bg: @gray-lighter;
@@ -42,7 +43,7 @@
 
 @layout-footer-bg: @navbar-default-bg;
 @layout-footer-top-border-color: @navbar-border-bottom-color;
-@layout-footer-text-color: @navbar-default-link-color;
+@layout-footer-link-color: @navbar-default-link-color;
 
 // == Layout related
 
@@ -73,6 +74,7 @@
 @navbar-height: 54px;
 
 // == Type
+
 @font-size-base: 16px;
 @font-size-h1: 24px;
 @font-size-h2: 21px;
