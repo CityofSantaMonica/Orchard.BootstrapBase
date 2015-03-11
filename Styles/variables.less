@@ -10,7 +10,7 @@
 
 // == Colors
 
-@brand-secondary: spin(@brand-primary, 90);
+@brand-secondary: @brand-primary;
 @btn-secondary-color: @white;
 @btn-secondary-bg: @brand-secondary;
 @btn-secondary-border: darken(@btn-secondary-bg, 5%);
@@ -25,6 +25,7 @@
 
 @layout-main-container-bg: transparent;
 
+//overriding Bootstrap's navbar-default styles
 @navbar-default-bg: @brand-primary;
 @navbar-default-link-color: @white;
 @navbar-default-link-hover-color: @white;
