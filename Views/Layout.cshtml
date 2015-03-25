@@ -32,6 +32,8 @@
     // using Tag so the layout div gets the classes, id and other attributes added to the Model
     var tag = Tag(Model, "div");
 }
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
 @tag.StartElement
 
 @if (Model.Navigation != null) {
@@ -54,7 +56,6 @@
 </div>
 }
 
-@if (Model.AsideFirst != null || Model.Content != null || Model.AsideSecond != null) {
 <div id="layout-main-container" class="container">
     <div id="layout-main">
         @if (Model.AsideFirst != null) {
@@ -62,14 +63,13 @@
             @Zone(Model.AsideFirst)
         </aside>
         }
-        @if (Model.Content != null) {
         <div id="layout-content">
-            <div id="content">
+            @* See http://getbootstrap.com/getting-started/#skip-navigation *@
+            <div id="content" tabindex="-1">
                 @* the *local* content zone is in here *@
                 @Zone(Model.Content)
             </div>
         </div>
-        }
         @if (Model.AsideSecond != null) {
         <aside id="aside-second" class="aside-second">
             @Zone(Model.AsideSecond)
