@@ -19,7 +19,9 @@ body {
 }
 
 #layout-main-container {
-    margin-bottom: @gutter;
+    @media @media-md {
+        margin-bottom: @gutter;
+    }
 
     #layout-main {
         .make-row();
@@ -28,6 +30,8 @@ body {
             background-color: @aside-first-bg;
         }
         #layout-content {
+            //default to 12 column content area
+            .make-md-column(12);
             background-color: @layout-content-bg;
 
             //See http://getbootstrap.com/getting-started/#skip-navigation
