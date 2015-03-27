@@ -9,13 +9,18 @@
 
 @{
     var theme = WorkContext.CurrentTheme;
-
+    var favicon = Url.Content(theme.Location + "/" + theme.Path + "/Images/" + "favicon.ico");
+    
+    if(!File.Exists(favicon)) {
+        favicon = "/Themes/CSM.BootstrapBase/Images/favicon.ico";
+    }
+    
     //favicon
     RegisterLink(
         new LinkEntry {
             Type = "image/x-icon",
             Rel = "shortcut icon",
-            Href = Url.Content(theme.Location + "/" + theme.Path + "/Images/" + "favicon.ico")
+            Href = favicon
         }
     );
     
