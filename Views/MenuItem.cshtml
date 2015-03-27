@@ -26,7 +26,11 @@
 
         if (Model.Content.ContentItem.ContentType == "DividerMenuItem")
         {
-            @Display(New.MenuDividerItem(Model.Content.ContentItem));
+            try
+            {
+                @Display(New.DividerMenuItem(Model.Content.ContentItem));
+            }
+            catch { }
         }
         else
         {
