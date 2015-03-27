@@ -32,7 +32,9 @@
     // using Tag so the layout div gets the classes, id and other attributes added to the Model
     var tag = Tag(Model, "div");
 }
-<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<a id="skip" href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+<a id="top" class="invisible"></a>
 
 @tag.StartElement
 
@@ -100,6 +102,8 @@
     </div>
 </div>
 }
+
+<a href="#top" class="back-to-top invisible">Back to top</a>
 
 @if (Model.Footer != null) {
 <footer id="layout-footer">
