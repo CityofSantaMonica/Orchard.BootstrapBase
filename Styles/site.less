@@ -41,7 +41,7 @@ img {
     }
 }
 
-@media screen and (min-width: @screen-sm-min) {
+@media @media-sm {
     .jumbotron {
         h1,
         .h1 {
@@ -50,6 +50,10 @@ img {
     }
 }
 
-@media @media-sm-max {
-    .back-to-top { visibility: visible; display: block; padding: 5px 10px; }
+.back-to-top {
+    margin: (@gutter / 2) auto;
+    @media @media-md {
+        visibility: hidden !important;
+        display: none !important;
+    }
 }
