@@ -50,6 +50,7 @@
 // breakpoints
 @screen-sm-min: 48em; // ~768px
 @screen-md-min: 58.75em; // ~940px
+@screen-sm-max: (@screen-md-min - unit((1 / unit(@font-size-base)), em)); // ~939px
 @screen-lg-min: 68.75em; // ~1100px
 @screen-xl-min: 87.5em; // ~1400px
 @screen-xxl-min: 120em; // ~1920px
@@ -59,6 +60,7 @@
 
 //tilde is needed so the quotes won't be printed
 @media-sm: ~"only screen and (min-width: @{screen-sm-min})";
+@media-sm-max: ~"only screen and (max-width: @{screen-sm-max})";
 @media-md: ~"only screen and (min-width: @{screen-md-min})"; 
 @media-lg: ~"only screen and (min-width: @{screen-lg-min})";
 @media-xl: ~"only screen and (min-width: @{screen-xl-min})"; 
