@@ -46,16 +46,7 @@
         }
     );
 
-    var siteCss = Url.Content(theme.Location + "/" + theme.Path + "site.css");
-    if (File.Exists(siteCss))
-    {
-        Style.Include(siteCss);
-    }
-    else
-    {
-        Style.Include("site.css");
-    }
-    
+    Style.Include("site.css");
 
     //for IE < 9, include HTML5Shiv in the head
     Script.Include("~/Core/Shapes/Scripts/html5.js").UseCondition("IE lt 9").AtHead();
