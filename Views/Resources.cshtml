@@ -4,7 +4,6 @@
     // override AdditionalResources.cshtml in a child theme to include any custom resources
 }
 
-@using Orchard.Mvc.Html;
 @using Orchard.UI.Resources;
 
 @{
@@ -48,8 +47,6 @@
 
     Style.Include("site.css");
 
-    //for IE < 9, include HTML5Shiv in the head
-    Script.Include("~/Core/Shapes/Scripts/html5.js").UseCondition("IE lt 9").AtHead();
     Script.Require("jQuery").AtFoot();
     Script.Require("jQueryUI").AtFoot();
     Script.Include("../Scripts/bootstrap/dist/bootstrap.js", "../Scripts/bootstrap/dist/bootstrap.min.js").AtFoot();
