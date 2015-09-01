@@ -27,7 +27,7 @@
     RegisterLink(
         new LinkEntry {
             Rel = "stylesheet",
-            Href = "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+            Href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
         }
     );
 
@@ -47,9 +47,8 @@
 
     Style.Include("site.css");
 
-    Script.Require("jQuery").AtFoot();
+    Script.Require("Bootstrap").AtFoot();
     Script.Require("jQueryUI").AtFoot();
-    Script.Include("../Scripts/bootstrap/dist/bootstrap.js", "../Scripts/bootstrap/dist/bootstrap.min.js").AtFoot();
 
     // override AdditionalResources.cshtml in a child theme to include any custom resources
     Display.AdditionalResources();
