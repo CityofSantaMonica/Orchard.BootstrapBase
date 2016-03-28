@@ -9,25 +9,17 @@
 @{
     var theme = WorkContext.CurrentTheme;
     var favicon = Url.Content(theme.Location + "/" + theme.Path + "/Images/" + "favicon.ico");
-    
+
     if(!File.Exists(favicon)) {
         favicon = "/Themes/CSM.BootstrapBase/Images/favicon.ico";
     }
-    
+
     //favicon
     RegisterLink(
         new LinkEntry {
             Type = "image/x-icon",
             Rel = "shortcut icon",
             Href = favicon
-        }
-    );
-    
-    //font-awesome CDN
-    RegisterLink(
-        new LinkEntry {
-            Rel = "stylesheet",
-            Href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
         }
     );
 
@@ -45,6 +37,7 @@
         }
     );
 
+    Style.Require("FontAwesome");
     Style.Include("site.css");
 
     Script.Require("Bootstrap").AtFoot();
