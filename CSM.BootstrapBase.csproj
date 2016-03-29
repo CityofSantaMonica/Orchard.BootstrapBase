@@ -12,7 +12,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CSM.BootstrapBase</RootNamespace>
     <AssemblyName>CSM.BootstrapBase</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -48,74 +48,56 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.ComponentModel.DataAnnotations">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.DynamicData" />
-    <Reference Include="System.Web.Mvc, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\aspnetmvc\System.Web.Mvc.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Images\city-logo.png" />
     <Content Include="Images\favicon.ico" />
-    <Content Include="Scripts\bootstrap\dist\bootstrap.js" />
-    <Content Include="Scripts\bootstrap\dist\bootstrap.min.js" />
-    <Content Include="Scripts\bootstrap\dist\npm.js" />
-    <Content Include="Scripts\bootstrap\affix.js" />
-    <Content Include="Scripts\bootstrap\alert.js" />
-    <Content Include="Scripts\bootstrap\button.js" />
-    <Content Include="Scripts\bootstrap\carousel.js" />
-    <Content Include="Scripts\bootstrap\collapse.js" />
-    <Content Include="Scripts\bootstrap\dropdown.js" />
-    <Content Include="Scripts\bootstrap\modal.js" />
-    <Content Include="Scripts\bootstrap\popover.js" />
-    <Content Include="Scripts\bootstrap\scrollspy.js" />
-    <Content Include="Scripts\bootstrap\tab.js" />
-    <Content Include="Scripts\bootstrap\tests\index.html" />
-    <Content Include="Scripts\bootstrap\tests\unit\affix.js" />
-    <Content Include="Scripts\bootstrap\tests\unit\alert.js" />
-    <Content Include="Scripts\bootstrap\tests\unit\button.js" />
-    <Content Include="Scripts\bootstrap\tests\unit\carousel.js" />
-    <Content Include="Scripts\bootstrap\tests\unit\collapse.js" />
-    <Content Include="Scripts\bootstrap\tests\unit\dropdown.js" />
-    <Content Include="Scripts\bootstrap\tests\unit\modal.js" />
-    <Content Include="Scripts\bootstrap\tests\unit\phantom.js" />
-    <Content Include="Scripts\bootstrap\tests\unit\popover.js" />
-    <Content Include="Scripts\bootstrap\tests\unit\scrollspy.js" />
-    <Content Include="Scripts\bootstrap\tests\unit\tab.js" />
-    <Content Include="Scripts\bootstrap\tests\unit\tooltip.js" />
-    <Content Include="Scripts\bootstrap\tests\vendor\jquery.min.js" />
-    <Content Include="Scripts\bootstrap\tests\vendor\qunit.css" />
-    <Content Include="Scripts\bootstrap\tests\vendor\qunit.js" />
-    <Content Include="Scripts\bootstrap\tests\visual\affix.html" />
-    <Content Include="Scripts\bootstrap\tests\visual\alert.html" />
-    <Content Include="Scripts\bootstrap\tests\visual\button.html" />
-    <Content Include="Scripts\bootstrap\tests\visual\carousel.html" />
-    <Content Include="Scripts\bootstrap\tests\visual\collapse.html" />
-    <Content Include="Scripts\bootstrap\tests\visual\dropdown.html" />
-    <Content Include="Scripts\bootstrap\tests\visual\modal.html" />
-    <Content Include="Scripts\bootstrap\tests\visual\popover.html" />
-    <Content Include="Scripts\bootstrap\tests\visual\scrollspy.html" />
-    <Content Include="Scripts\bootstrap\tests\visual\tab.html" />
-    <Content Include="Scripts\bootstrap\tests\visual\tooltip.html" />
-    <Content Include="Scripts\bootstrap\tooltip.js" />
-    <Content Include="Scripts\bootstrap\transition.js" />
     <Content Include="Web.config" />
-    <Content Include="Scripts\Web.config" />
     <Content Include="Styles\Web.config" />
-    <Content Include="Fonts\Web.config" />
     <Content Include="Theme.txt" />
     <Content Include="Theme.png" />
     <Content Include="Placement.info" />
@@ -131,79 +113,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Scripts\bootstrap\.jscsrc" />
-    <Content Include="Scripts\bootstrap\.jshintrc" />
-    <Content Include="Scripts\bootstrap\tests\unit\.jshintrc" />
-    <Content Include="Styles\bootstrap\alerts.less" />
-    <Content Include="Styles\bootstrap\badges.less" />
-    <Content Include="Styles\bootstrap\bootstrap.less" />
-    <Content Include="Styles\bootstrap\breadcrumbs.less" />
-    <Content Include="Styles\bootstrap\button-groups.less" />
-    <Content Include="Styles\bootstrap\buttons.less" />
-    <Content Include="Styles\bootstrap\carousel.less" />
-    <Content Include="Styles\bootstrap\close.less" />
-    <Content Include="Styles\bootstrap\code.less" />
-    <Content Include="Styles\bootstrap\component-animations.less" />
-    <Content Include="Styles\bootstrap\dropdowns.less" />
-    <Content Include="Styles\bootstrap\forms.less" />
-    <Content Include="Styles\bootstrap\glyphicons.less" />
-    <Content Include="Styles\bootstrap\grid.less" />
-    <Content Include="Styles\bootstrap\input-groups.less" />
-    <Content Include="Styles\bootstrap\jumbotron.less" />
-    <Content Include="Styles\bootstrap\labels.less" />
-    <Content Include="Styles\bootstrap\list-group.less" />
-    <Content Include="Styles\bootstrap\media.less" />
-    <Content Include="Styles\bootstrap\mixins.less" />
-    <Content Include="Styles\bootstrap\mixins\alerts.less" />
-    <Content Include="Styles\bootstrap\mixins\background-variant.less" />
-    <Content Include="Styles\bootstrap\mixins\border-radius.less" />
-    <Content Include="Styles\bootstrap\mixins\buttons.less" />
-    <Content Include="Styles\bootstrap\mixins\center-block.less" />
-    <Content Include="Styles\bootstrap\mixins\clearfix.less" />
-    <Content Include="Styles\bootstrap\mixins\forms.less" />
-    <Content Include="Styles\bootstrap\mixins\gradients.less" />
-    <Content Include="Styles\bootstrap\mixins\grid-framework.less" />
-    <Content Include="Styles\bootstrap\mixins\grid.less" />
-    <Content Include="Styles\bootstrap\mixins\hide-text.less" />
-    <Content Include="Styles\bootstrap\mixins\image.less" />
-    <Content Include="Styles\bootstrap\mixins\labels.less" />
-    <Content Include="Styles\bootstrap\mixins\list-group.less" />
-    <Content Include="Styles\bootstrap\mixins\nav-divider.less" />
-    <Content Include="Styles\bootstrap\mixins\nav-vertical-align.less" />
-    <Content Include="Styles\bootstrap\mixins\opacity.less" />
-    <Content Include="Styles\bootstrap\mixins\pagination.less" />
-    <Content Include="Styles\bootstrap\mixins\panels.less" />
-    <Content Include="Styles\bootstrap\mixins\progress-bar.less" />
-    <Content Include="Styles\bootstrap\mixins\reset-filter.less" />
-    <Content Include="Styles\bootstrap\mixins\resize.less" />
-    <Content Include="Styles\bootstrap\mixins\responsive-visibility.less" />
-    <Content Include="Styles\bootstrap\mixins\size.less" />
-    <Content Include="Styles\bootstrap\mixins\tab-focus.less" />
-    <Content Include="Styles\bootstrap\mixins\table-row.less" />
-    <Content Include="Styles\bootstrap\mixins\text-emphasis.less" />
-    <Content Include="Styles\bootstrap\mixins\text-overflow.less" />
-    <Content Include="Styles\bootstrap\mixins\vendor-prefixes.less" />
-    <Content Include="Styles\bootstrap\modals.less" />
-    <Content Include="Styles\bootstrap\navbar.less" />
-    <Content Include="Styles\bootstrap\navs.less" />
-    <Content Include="Styles\bootstrap\normalize.less" />
-    <Content Include="Styles\bootstrap\pager.less" />
-    <Content Include="Styles\bootstrap\pagination.less" />
-    <Content Include="Styles\bootstrap\panels.less" />
-    <Content Include="Styles\bootstrap\popovers.less" />
-    <Content Include="Styles\bootstrap\print.less" />
-    <Content Include="Styles\bootstrap\progress-bars.less" />
-    <Content Include="Styles\bootstrap\responsive-embed.less" />
-    <Content Include="Styles\bootstrap\responsive-utilities.less" />
-    <Content Include="Styles\bootstrap\scaffolding.less" />
-    <Content Include="Styles\bootstrap\tables.less" />
-    <Content Include="Styles\bootstrap\theme.less" />
-    <Content Include="Styles\bootstrap\thumbnails.less" />
-    <Content Include="Styles\bootstrap\tooltip.less" />
-    <Content Include="Styles\bootstrap\type.less" />
-    <Content Include="Styles\bootstrap\utilities.less" />
-    <Content Include="Styles\bootstrap\variables.less" />
-    <Content Include="Styles\bootstrap\wells.less" />
     <Content Include="Styles\layout.less" />
     <Content Include="Styles\navbar.less" />
     <Content Include="Styles\forms.less" />
@@ -229,18 +138,13 @@
     <Content Include="Views\Zone-Featured.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Fonts\glyphicons-halflings-regular.woff" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Images\Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\LogOn.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ResourceManifest.cs" />
+    <Content Include="packages.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
