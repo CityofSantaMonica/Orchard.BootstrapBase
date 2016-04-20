@@ -1,0 +1,8 @@
+[
+  {
+    "inputs": [ "Styles/site.less" ],
+    "output": "Styles/site.css",
+    "watch": [ "Styles/*.less" ],
+    "generateSourceMaps": false
+  }
+]
