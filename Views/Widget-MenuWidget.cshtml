@@ -1,12 +1,25 @@
-﻿@*
+﻿@using Orchard.ContentManagement;
+@using Orchard.Widgets.Models;
+@*
     a "widget alternate" for the Menu widget
     see http://docs.orchardproject.net/Documentation/Alternates#URLandWidgetAlternates for more info
 *@
 
 @{
+    var widgetPart = ((IContent)Model.ContentItem).As<WidgetPart>();
     //removes the <article> wrapper around this menu widget
     Model.Metadata.Wrappers.Clear();
     var menu = Display(Model.Content);
 }
 
+@if ((widgetPart.RenderTitle && HasText(widgetPart.Title)) || Model.Header != null)
+{
+    <header>
+        @if ((widgetPart.RenderTitle && HasText(widgetPart.Title)))
+        {
+            <h1>@widgetPart.Title</h1>
+        }
+        @Display(Model.Header)
+    </header>
+}
 @menu
