@@ -163,7 +163,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Parts\Layout.cshtml" />
-    <Content Include="Views\Parts\MenuWidget-Navigation.cshtml.not" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Parts\MenuWidget-Navigation.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
