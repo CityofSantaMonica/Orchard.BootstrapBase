@@ -1,0 +1,11 @@
+﻿@{ 
+    var showHamburger = Model.ShowHamburger;
+    var dataTarget = Model.DataTarget;
+}
+
+<header class="navbar-header">
+    @if (showHamburger) {
+        @Display.MenuHamburger(DataTarget: dataTarget)
+    }
+    @Display.SiteBrand()
+</header>

@@ -12,10 +12,8 @@
     }
     else
     {
-        if ((bool)Model.Selected)
+        if (Model.Selected)
         {
-            Model.Classes.Add("current");
-            //for Bootstrap
             Model.Classes.Add("active");
         }
 
@@ -24,6 +22,7 @@
             Model.Classes.Add("dropdown");
         }
 
+        @* this is a total hack from CSM.Navigation, it should be put back where it belongs *@
         if (Model.Content.ContentItem.ContentType == "DividerMenuItem")
         {
             try
@@ -47,7 +46,7 @@
                 @renderedMenuItemLink
                 if (Model.IsDropdown)
                 {
-                @Display(New.Dropdown(Model))
+                    @Display(New.Dropdown(Model))
                 }
                 @tag.EndElement
             }

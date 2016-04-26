@@ -1,0 +1,27 @@
+@{ 
+    var iconPath = Model.IconPath ?? "~/Themes/CSM.BootstrapBase/Images/city-logo.png";
+    var linkToHome = Model.LinkToHome ?? true;
+    var showCityName = Model.ShowCityName ?? true;
+    var brandName = Model.BrandName ?? WorkContext.CurrentSite.SiteName;
+
+    var iconTag = new TagBuilder(linkToHome ? "a" : "div");
+    iconTag.AddCssClass("media-left");
+    iconTag.AddCssClass("media-center");
+
+    if (linkToHome) {
+        iconTag.Attributes.Add("href", "http://www.smgov.net");
+        iconTag.Attributes.Add("target", "_blank");
+    }
+}
+
+<div class="media">
+    @Html.Raw(iconTag.ToString(TagRenderMode.StartTag))
+    <img class="media-object" src="@Href(iconPath)" alt="City logo" />
+    @Html.Raw(iconTag.ToString(TagRenderMode.EndTag))
+    <a href="@Href("~/")" class="navbar-link media-body media-center">
+        @if (showCityName) {
+        @:City of Santa Monica<br />
+        }
+        @brandName
+    </a>
+</div>
