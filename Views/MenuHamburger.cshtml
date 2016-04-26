@@ -1,7 +1,5 @@
-@using Orchard.UI;
-
 @{ 
-    var target = Model.DataTarget ?? "#navbar-collapse";
+    var target = Model.DataTarget;
     var toggleText = Model.ToggleText ?? T("Toggle navigation").Text;
     var collapsed = Model.Collapsed ?? true;
 
@@ -14,9 +12,9 @@
     if (collapsed) { tag.AddCssClass("collapsed"); }
 }
 
-@tag.ToString(TagRenderMode.StartTag)
+@Html.Raw(tag.ToString(TagRenderMode.StartTag))
 <span class="sr-only">@toggleText</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
-@tag.ToString(TagRenderMode.EndTag)
+@Html.Raw(tag.ToString(TagRenderMode.EndTag))

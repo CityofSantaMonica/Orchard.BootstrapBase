@@ -128,7 +128,6 @@
     <Content Include="Views\Insertions.cshtml" />
     <Content Include="Views\MenuItem.cshtml" />
     <Content Include="Views\MenuItemLink.cshtml" />
-    <Content Include="Views\Zone-Navigation.cshtml" />
     <Content Include="Views\Menu.cshtml" />
     <Content Include="Views\Widget-MenuWidget.cshtml" />
     <Content Include="Views\Dropdown.cshtml" />
@@ -138,7 +137,6 @@
     <Content Include="Views\AdditionalResources.cshtml" />
     <Content Include="Views\Elements\Grid.cshtml" />
     <Content Include="Views\Elements\Column.cshtml" />
-    <Content Include="Views\Parts.Layout.cshtml" />
     <Content Include="Views\Zone-Featured.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -154,13 +152,17 @@
     <Content Include="Assets.json" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Parts.MenuWidget-Navigation.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\SiteBrand.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\MenuHamburger.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\NavbarHeader.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Parts\Layout.cshtml" />
+    <Content Include="Views\Parts\MenuWidget-Navigation.cshtml.not" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

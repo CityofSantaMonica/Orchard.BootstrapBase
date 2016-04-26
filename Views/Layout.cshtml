@@ -1,4 +1,6 @@
-﻿@functions {
+﻿@using Orchard.Core.Shapes
+
+@functions {
     // To support the layout classifaction below. Implementing as a razor function because we can, could otherwise be a Func<string[], string, string> in the code block following.
     string CalcuClassify(string[] zoneNames, string classNamePrefix) {
         var zoneCounter = 0;
@@ -38,18 +40,35 @@
 
 @tag.StartElement
 
-@if (Model.Navigation != null) {
-<div id="layout-navigation">
-    @Zone(Model.Navigation)
-</div>
-}
-
 @if (Model.Header != null) {
 <header id="layout-header">
-    <div id="header">
-        @Zone(Model.Header)
-    </div>
+    @Zone(Model.Header)
 </header>
+}
+
+@{ 
+    var hasMenuItems = Model.Navigation != null && Model.Navigation.Items != null;
+}
+
+<div id="layout-navigation">
+    <div class="zone zone-navigation navbar navbar-default">
+        <div class="container">
+            @Display.NavbarHeader(ShowHamburger: hasMenuItems, DataTarget: "#navbar-collapse")
+            @if (hasMenuItems) {
+            <nav class="collapse navbar-collapse" id="navbar-collapse">
+                @foreach (var item in CoreShapes.Order(Model.Items)) {
+                    @Display(item)
+                }
+            </nav>
+            }
+        </div>
+    </div>
+</div>
+
+@if (Model.ContextNav != null) {
+<div id="layout-contextnav">
+    @Zone(Model.ContextNav)
+</div>
 }
 
 @if (Model.Featured != null) {
@@ -111,6 +130,13 @@
     </div>
 </div>
 
+@if (Model.FooterNav != null) {
+<div id="layout-footernav">
+    <div id="footernav" class="container">
+        @Zone(Model.FooterNav)
+    </div>
+</div>
+}
 
 @if (Model.Footer != null) {
 <footer id="layout-footer">
