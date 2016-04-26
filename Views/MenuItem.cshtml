@@ -12,10 +12,8 @@
     }
     else
     {
-        if ((bool)Model.Selected)
+        if (Model.Selected)
         {
-            Model.Classes.Add("current");
-            //for Bootstrap
             Model.Classes.Add("active");
         }
 
@@ -48,7 +46,7 @@
                 @renderedMenuItemLink
                 if (Model.IsDropdown)
                 {
-                @Display(New.Dropdown(Model))
+                    @Display(New.Dropdown(Model))
                 }
                 @tag.EndElement
             }

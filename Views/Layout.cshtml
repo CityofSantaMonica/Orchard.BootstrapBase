@@ -47,22 +47,23 @@
 }
 
 @{ 
-    var hasMenuItems = Model.Navigation != null && Model.Navigation.Items != null;
+    var hasNavbarItems = Model.Navigation != null && Model.Navigation.Items != null && Model.Navigation.Items.Count > 0;
+    var navbarItems = hasNavbarItems ? Model.Navigation.Items : Enumerable.Empty<dynamic>();
 }
 
 <div id="layout-navigation">
-    <div class="zone zone-navigation navbar navbar-default">
+    <nav class="zone zone-navigation navbar navbar-default">
         <div class="container">
-            @Display.NavbarHeader(ShowHamburger: hasMenuItems, DataTarget: "#navbar-collapse")
-            @if (hasMenuItems) {
-            <nav class="collapse navbar-collapse" id="navbar-collapse">
-                @foreach (var item in CoreShapes.Order(Model.Items)) {
+            @Display.NavbarHeader(ShowHamburger: hasNavbarItems, DataTarget: "#navbar-collapse")
+            @if (hasNavbarItems) {
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                @foreach (var item in CoreShapes.Order(navbarItems)) {
                     @Display(item)
                 }
-            </nav>
+            </div>
             }
         </div>
-    </div>
+    </nav>
 </div>
 
 @if (Model.ContextNav != null) {

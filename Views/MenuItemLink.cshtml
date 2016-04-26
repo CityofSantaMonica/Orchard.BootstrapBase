@@ -1,12 +1,29 @@
 ﻿@* This shape template is overriding ~/Orchard.Core/Shapes/Views/MenuItemLink.cshtml *@
 
+@{ 
+    var tag = new TagBuilder("a");
+    if (Model.IsDropdown)
+    {
+        tag.AddCssClass("dropdown-toggle");
+        tag.Attributes.Add("href", "#");
+        tag.Attributes.Add("role", "button");
+        tag.Attributes.Add("data-toggle", "dropdown");
+        tag.Attributes.Add("aria-expanded", "false");
+    }
+    else
+    {
+        tag.Attributes.Add("href", Model.Href);
+    }
+}
+
+@Html.Raw(tag.ToString(TagRenderMode.StartTag))
+@Model.Text
 @if (Model.IsDropdown)
 {
-    <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-        @Model.Text <span class="caret"></span>
-    </a>
+    <span class="caret"></span>
 }
-else
+@if (Model.Selected)
 {
-    <a href="@Model.Href">@Model.Text</a>
+    <span class="sr-only">(current)</span>
 }
+@Html.Raw(tag.ToString(TagRenderMode.EndTag))
