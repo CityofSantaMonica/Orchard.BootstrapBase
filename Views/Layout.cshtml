@@ -42,7 +42,9 @@
 
 @if (Model.Header != null) {
 <header id="layout-header">
-    @Zone(Model.Header)
+    <div class="container">
+        @Zone(Model.Header)
+    </div>
 </header>
 }
 
@@ -141,9 +143,10 @@
 
 @if (Model.Footer != null) {
 <footer id="layout-footer">
-    <div id="footer" class="container">
+    <div class="container">
         @Zone(Model.Footer)
     </div>
 </footer>
 }
+
 @tag.EndElement
