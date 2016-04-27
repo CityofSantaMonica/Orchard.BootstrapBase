@@ -42,11 +42,15 @@
 
 @layout-tripel-container-bg: @gray-lighter;
 
-@layout-footer-bg: @navbar-default-bg;
+@layout-footernav-bg: @navbar-default-bg;
+@layout-footernav-color: @text-color;
+@layout-footernav-link-color: @navbar-default-link-color;
+
+@layout-footer-bg: @layout-footernav-bg;
 @layout-footer-top-border-color: @navbar-border-bottom-color;
 @layout-footer-top-border-width: @navbar-border-bottom-width;
-@layout-footer-color: @text-color;
-@layout-footer-link-color: @navbar-default-link-color;
+@layout-footer-color: @layout-footernav-color;
+@layout-footer-link-color: @layout-footernav-link-color;
 
 // == Layout related
 
