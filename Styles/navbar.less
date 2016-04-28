@@ -61,7 +61,9 @@
                 font-size: @font-size-base * 1.1;
             }
 
-            &.in { margin-top: @gutter * 0.5; }
+            &.in { 
+                margin-top: @gutter * 0.5;
+            }
 
             ul.navbar-nav {
                 @top-pad: 24px;
@@ -120,6 +122,9 @@
     .navbar {
         .contextnav-label {
             display: block;
+            line-height: @line-height-computed;
+            padding-top: @navbar-padding-vertical;
+            padding-bottom: @navbar-padding-vertical;
 
             @media @media-md {
                 float: left;

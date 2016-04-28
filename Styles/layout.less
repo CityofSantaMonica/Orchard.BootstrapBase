@@ -2,6 +2,15 @@
 
 @import "variables.less";
 
+.container {
+    @media @media-xl {
+        width: @container-xl;
+    }
+    @media @media-xxl {
+        width: @container-xxl;
+    }
+}
+
 body {
     background-color: @body-bg;
     overflow-x: hidden;
@@ -89,14 +98,3 @@ body {
         color: @layout-footer-link-color;
     }
 }
-
-.container {
-    @media @media-xl {
-        width: @container-xl;
-    }
-    @media @media-xxl {
-        width: @container-xxl;
-    }
-}
-
-
