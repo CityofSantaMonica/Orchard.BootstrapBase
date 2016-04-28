@@ -68,9 +68,20 @@
     </nav>
 </div>
 
-@if (Model.ContextNav != null) {
+@{
+    var hasContextNavItems = Model.ContextNav != null && Model.ContextNav.Items != null && Model.ContextNav.Items.Count > 0;
+    var contextNavItems = hasContextNavItems ? Model.ContextNav.Items : Enumerable.Empty<dynamic>();
+}
+
+@if (hasContextNavItems) {
 <div id="layout-contextnav">
-    @Zone(Model.ContextNav)
+    <nav class="zone zone-contextnav navbar navbar-secondary">
+        <div class="container">
+            @foreach (var item in CoreShapes.Order(contextNavItems)) {
+                @Display(item)
+            }
+        </div>
+    </nav>
 </div>
 }
 

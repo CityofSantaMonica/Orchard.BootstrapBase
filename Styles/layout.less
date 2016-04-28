@@ -2,6 +2,15 @@
 
 @import "variables.less";
 
+.container {
+    @media @media-xl {
+        width: @container-xl;
+    }
+    @media @media-xxl {
+        width: @container-xxl;
+    }
+}
+
 body {
     background-color: @body-bg;
     overflow-x: hidden;
@@ -92,25 +101,9 @@ body {
 
 #layout-footer {
     background-color: @layout-footer-bg;
-    border-top-style: solid;
-    border-top-width: @layout-footer-top-border-width;
-    border-top-color: @layout-footer-top-border-color;
     color: @layout-footer-color;
 
     a {
         color: @layout-footer-link-color;
     }
-}
-
-.container {
-    @media @media-xl {
-        width: @container-xl;
-    }
-    @media @media-xxl {
-        width: @container-xxl;
-    }
-}
-
-.navbar-header .media-body {
-  width: inherit;
 }
