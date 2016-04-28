@@ -1,15 +1,17 @@
 ﻿@import "variables.less";
 
+.navbar {
+    @media (min-width: @grid-float-breakpoint) {
+        border-radius: 0;
+    }
+
+    .navbar-header .media-body {
+      width: inherit;
+    }
+}
+
 #layout-navigation {
-    border-bottom-style: solid;
-    border-bottom-width: @navbar-border-bottom-width;
-    border-bottom-color: @navbar-border-bottom-color;
-
     .navbar {
-        @media (min-width: @grid-float-breakpoint) {
-            border-radius: 0;
-        }
-
         margin-bottom: 0;
 
         @media @media-xxl {
@@ -131,14 +133,16 @@
 
         a {
             color: @navbar-secondary-link-color;
-        }
-        a.active {
-            color: @navbar-secondary-link-active-color;
-            background-color: @navbar-secondary-link-active-bg;
-        }
-        a:hover {
-            color: @navbar-secondary-link-hover-color;
-            background-color: @navbar-secondary-link-hover-bg;
+
+            &.active {
+                color: @navbar-secondary-link-active-color;
+                background-color: @navbar-secondary-link-active-bg;
+            }
+
+            &:hover {
+                color: @navbar-secondary-link-hover-color;
+                background-color: @navbar-secondary-link-hover-bg;
+            }
         }
     }
 }
