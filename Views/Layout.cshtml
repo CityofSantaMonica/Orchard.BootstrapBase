@@ -17,6 +17,22 @@
     /* Layout classification based on filled zones
     ***************************************************************/
 
+    Func<dynamic, bool> HasItems = x => x != null && x.Items != null && x.Items.Count > 0;
+
+    bool hasHeaderItems = HasItems(Model.Header);
+    bool hasNavbarItems = HasItems(Model.Navigation);
+    bool hasContextNavItems = HasItems(Model.ContextNav);
+
+    var navbarItems = hasNavbarItems ? Model.Navigation.Items : Enumerable.Empty<dynamic>();
+    var contextNavItems = hasContextNavItems ? Model.ContextNav.Items : Enumerable.Empty<dynamic>();
+
+    if (hasHeaderItems) {
+        Model.Classes.Add("with-header");
+    }
+    if (hasContextNavItems) {
+        Model.Classes.Add("with-contextnav");
+    }
+
     //Add classes to the wrapper div to toggle aside widget zones on and off
     var asideClass = CalcuClassify(new [] {"AsideFirst", "AsideSecond"}, "aside-"); // for aside-1, aside-2 or aside-12 if any of the aside zones are filled
     if (HasText(asideClass)) {
@@ -39,125 +55,112 @@
 <a id="top" class="invisible"></a>
 
 @tag.StartElement
-
-@if (Model.Header != null) {
-<header id="layout-header">
-    <div class="container">
-        @Zone(Model.Header)
-    </div>
-</header>
-}
-
-@{ 
-    var hasNavbarItems = Model.Navigation != null && Model.Navigation.Items != null && Model.Navigation.Items.Count > 0;
-    var navbarItems = hasNavbarItems ? Model.Navigation.Items : Enumerable.Empty<dynamic>();
-}
-
-<div id="layout-navigation">
-    <nav class="zone zone-navigation navbar navbar-default">
+<div id="layout-navigation-wrapper">
+    @if (hasHeaderItems) {
+    <header id="layout-header">
         <div class="container">
-            @Display.NavbarHeader(ShowHamburger: hasNavbarItems, DataTarget: "#navbar-collapse")
-            @if (hasNavbarItems) {
-            <div class="collapse navbar-collapse" id="navbar-collapse">
-                @foreach (var item in CoreShapes.Order(navbarItems)) {
+            @Zone(Model.Header)
+        </div>
+    </header>
+    }
+    <div id="layout-navigation">
+        <nav class="zone zone-navigation navbar navbar-default">
+            <div class="container">
+                @Display.NavbarHeader(ShowHamburger: hasNavbarItems, DataTarget: "#navbar-collapse")
+                @if (hasNavbarItems){
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    @foreach (var item in CoreShapes.Order(navbarItems)) {
+                        @Display(item)
+                    }
+                </div>
+                }
+            </div>
+        </nav>
+    </div>
+    @if (hasContextNavItems) {
+    <div id="layout-contextnav">
+        <nav class="zone zone-contextnav navbar navbar-secondary">
+            <div class="container">
+                @foreach (var item in CoreShapes.Order(contextNavItems)) {
                     @Display(item)
                 }
             </div>
-            }
-        </div>
-    </nav>
-</div>
-
-@{
-    var hasContextNavItems = Model.ContextNav != null && Model.ContextNav.Items != null && Model.ContextNav.Items.Count > 0;
-    var contextNavItems = hasContextNavItems ? Model.ContextNav.Items : Enumerable.Empty<dynamic>();
-}
-
-@if (hasContextNavItems) {
-<div id="layout-contextnav">
-    <nav class="zone zone-contextnav navbar navbar-secondary">
-        <div class="container">
-            @foreach (var item in CoreShapes.Order(contextNavItems)) {
-                @Display(item)
-            }
-        </div>
-    </nav>
-</div>
-}
-
-@if (Model.Featured != null) {
-<div id="layout-featured">
-    @Zone(Model.Featured)
-</div>
-}
-
-<div id="layout-main-container" class="container">
-    <div id="layout-main">
-        @if (Model.AsideFirst != null) {
-        <aside id="aside-first" class="aside-first">
-            @Zone(Model.AsideFirst)
-        </aside>
-        }
-        <div id="layout-content">
-            @* See http://getbootstrap.com/getting-started/#skip-navigation *@
-            <div id="content" tabindex="-1">
-                @* the *local* content zone is in here *@
-                @Zone(Model.Content)
-            </div>
-        </div>
-        @if (Model.AsideSecond != null) {
-        <aside id="aside-second" class="aside-second">
-            @Zone(Model.AsideSecond)
-        </aside>
-        }
+        </nav>
     </div>
+    }
 </div>
-
-@if (Model.TripelFirst != null || Model.TripelSecond != null || Model.TripelThird != null) {
-<div id="layout-tripel-container" class="container">
-    <div id="layout-tripel">
-        @* as in beer *@
-        @if (Model.TripelFirst != null) {
+<div id="layout-body-wrapper">
+    @if (Model.Featured != null) {
+    <div id="layout-featured">
+        @Zone(Model.Featured)
+    </div>
+    }
+    <div id="layout-content-container" class="container">
+        <div id="layout-content">
+            @if (Model.AsideFirst != null) {
+            <aside id="aside-first" class="aside-first">
+                @Zone(Model.AsideFirst)
+            </aside>
+            }
+            <div id="layout-main">
+                @* See http://getbootstrap.com/getting-started/#skip-navigation *@
+                <div id="content" tabindex="-1">
+                    @* the *local* content zone is in here *@
+                    @Zone(Model.Content)
+                </div>
+            </div>
+            @if (Model.AsideSecond != null) {
+            <aside id="aside-second" class="aside-second">
+                @Zone(Model.AsideSecond)
+            </aside>
+            }
+        </div>
+    </div>
+    @if (Model.TripelFirst != null || Model.TripelSecond != null || Model.TripelThird != null) {
+    <div id="layout-tripel-container" class="container">
+        <div id="layout-tripel">
+            @* as in beer *@
+            @if (Model.TripelFirst != null) {
             <div id="tripel-first">
                 @Zone(Model.TripelFirst)
             </div>
-        }
-        @if (Model.TripelSecond != null) {
+            }
+            @if (Model.TripelSecond != null) {
             <div id="tripel-second">
                 @Zone(Model.TripelSecond)
             </div>
-        }
-        @if (Model.TripelThird != null) {
+            }
+            @if (Model.TripelThird != null) {
             <div id="tripel-third">
                 @Zone(Model.TripelThird)
             </div>
-        }
+            }
+        </div>
     </div>
-</div>
-}
-
-<div class="container back-to-top">
-    <div class="row">
-        <div class="col-md-12">
-            <a href="#top" class="btn btn-default">Back to top</a>
+    }
+    <div class="container back-to-top">
+        <div class="row">
+            <div class="col-md-12">
+                <a href="#top" class="btn btn-default">Back to top</a>
+            </div>
         </div>
     </div>
 </div>
-
-@if (Model.FooterNav != null) {
-<div id="layout-footernav">
-    <div id="footernav" class="container">
-        @Zone(Model.FooterNav)
+<div id="layout-footer-wrapper">
+    @if (Model.FooterNav != null) {
+    <div id="layout-footernav">
+        <div id="footernav" class="container">
+            @Zone(Model.FooterNav)
+        </div>
     </div>
+    }
+    @if (Model.Footer != null) {
+    <footer id="layout-footer">
+        <div class="container">
+            @Zone(Model.Footer)
+        </div>
+    </footer>
+    }
 </div>
-}
-
-@if (Model.Footer != null) {
-<footer id="layout-footer">
-    <div class="container">
-        @Zone(Model.Footer)
-    </div>
-</footer>
-}
 
 @tag.EndElement
