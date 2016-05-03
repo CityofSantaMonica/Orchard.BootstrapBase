@@ -1,27 +1,14 @@
 ﻿@using Orchard.Core.Shapes
 
-@functions {
-    // To support the layout classifaction below. Implementing as a razor function because we can, could otherwise be a Func<string[], string, string> in the code block following.
-    string CalcuClassify(string[] zoneNames, string classNamePrefix) {
-        var zoneCounter = 0;
-        var zoneNumsFilled = string.Join("", zoneNames.Select(zoneName => { ++zoneCounter; return Model[zoneName] != null ? zoneCounter.ToString() : "";}).ToArray());
-        return HasText(zoneNumsFilled) ? classNamePrefix + zoneNumsFilled : "";
-    }
-}
 @{
     Display.Insertions();
 
     // Zone as an alias for Display to help make it obvious when we're displaying zones
     Func<dynamic, dynamic> Zone = x => Display(x);
 
-    /* Layout classification based on filled zones
-    ***************************************************************/
-
-    Func<dynamic, bool> HasItems = x => x != null && x.Items != null && x.Items.Count > 0;
-
-    bool hasHeaderItems = HasItems(Model.Header);
-    bool hasNavbarItems = HasItems(Model.Navigation);
-    bool hasContextNavItems = HasItems(Model.ContextNav);
+    bool hasHeaderItems = LayoutHelpers.HasItems(Model.Header);
+    bool hasNavbarItems = LayoutHelpers.HasItems(Model.Navigation);
+    bool hasContextNavItems = LayoutHelpers.HasItems(Model.ContextNav);
 
     var navbarItems = hasNavbarItems ? Model.Navigation.Items : Enumerable.Empty<dynamic>();
     var contextNavItems = hasContextNavItems ? Model.ContextNav.Items : Enumerable.Empty<dynamic>();
@@ -34,14 +21,14 @@
     }
 
     //Add classes to the wrapper div to toggle aside widget zones on and off
-    var asideClass = CalcuClassify(new [] {"AsideFirst", "AsideSecond"}, "aside-"); // for aside-1, aside-2 or aside-12 if any of the aside zones are filled
-    if (HasText(asideClass)) {
+    var asideClass = LayoutHelpers.CalcuClassify(Model, new [] {"AsideFirst", "AsideSecond"}, "aside-"); // for aside-1, aside-2 or aside-12 if any of the aside zones are filled
+    if (LayoutHelpers.HasText(asideClass)) {
         Model.Classes.Add(asideClass);
     }
 
     //Add classes to the wrapper div to toggle tripel widget zones on and off
-    var tripelClass = CalcuClassify(new[] { "TripelFirst", "TripelSecond", "TripelThird" }, "tripel-"); // for tripel-1, triple-2, etc. if any of the tripel zones are filled
-    if (HasText(tripelClass)) {
+    var tripelClass = LayoutHelpers.CalcuClassify(Model, new[] { "TripelFirst", "TripelSecond", "TripelThird" }, "tripel-"); // for tripel-1, triple-2, etc. if any of the tripel zones are filled
+    if (LayoutHelpers.HasText(tripelClass)) {
         Model.Classes.Add(tripelClass);
     }
 
