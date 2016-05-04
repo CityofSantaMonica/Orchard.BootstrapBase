@@ -120,6 +120,22 @@
     .navbar-secondary {
         background-color: @navbar-secondary-bg;
 
+        .navbar-header {
+            .navbar-toggle {
+                border-color: @navbar-secondary-toggle-border-color;
+                .icon-bar {
+                  background-color: @navbar-secondary-toggle-border-color;
+                }
+                &:hover,
+                &:focus {
+                  background-color: @navbar-secondary-toggle-hover-bg;
+                  .icon-bar {
+                      background-color: @navbar-secondary-toggle-icon-bar-bg;
+                  }
+                }
+            }
+        }
+
         a {
             color: @navbar-secondary-link-color;
 
