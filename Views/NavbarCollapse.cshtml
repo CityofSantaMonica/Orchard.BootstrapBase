@@ -1,0 +1,10 @@
+﻿@{ 
+    var target = Model.DataTarget ?? "navbar-collapse";
+    var items = Model.Items ?? Enumerable.Empty<dynamic>();
+}
+
+<div class="collapse navbar-collapse" id="@target">
+    @foreach (var item in items) {
+        @Display(item)
+    }
+</div>

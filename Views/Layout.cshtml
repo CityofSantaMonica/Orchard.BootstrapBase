@@ -53,13 +53,10 @@
     <div id="layout-navigation">
         <nav class="zone zone-navigation navbar navbar-default">
             <div class="container">
-                @Display.NavbarHeader(ShowHamburger: hasNavbarItems, DataTarget: "#navbar-collapse")
+                @{ var target = "navbar-collapse"; }
+                @Display.NavbarHeader(ShowHamburger: hasNavbarItems, DataTarget: "#" + target)
                 @if (hasNavbarItems){
-                <div class="collapse navbar-collapse" id="navbar-collapse">
-                    @foreach (var item in CoreShapes.Order(navbarItems)) {
-                        @Display(item)
-                    }
-                </div>
+                    @Display.NavbarCollapse(DataTarget: target, Items: navbarItems)
                 }
             </div>
         </nav>

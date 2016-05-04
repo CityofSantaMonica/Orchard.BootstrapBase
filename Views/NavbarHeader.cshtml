@@ -1,5 +1,6 @@
 ﻿@{ 
     var showHamburger = Model.ShowHamburger;
+    var showBrand = Model.ShowBrand ?? true;
     var dataTarget = Model.DataTarget;
 }
 
@@ -7,5 +8,7 @@
     @if (showHamburger) {
         @Display.MenuHamburger(DataTarget: dataTarget)
     }
-    @Display.SiteBrand()
+    @if (showBrand) {
+        @Display.SiteBrand()
+    }
 </header>
