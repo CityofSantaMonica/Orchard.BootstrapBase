@@ -95,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\city-button.png" />
+    <Content Include="Images\city-button.svg" />
     <Content Include="Images\city-logo.png" />
     <Content Include="Images\favicon.ico" />
     <Content Include="Web.config" />
