@@ -2,6 +2,7 @@
     /* Initialization
    ***************************************************************/
 
+    string suffix = "City of Santa Monica";
     string title = Convert.ToString(Model.Title);
     string siteName = Convert.ToString(WorkContext.CurrentSite.SiteName);
     string pageClass = String.Empty;
@@ -20,7 +21,7 @@
 <html lang="@WorkContext.CurrentCulture" class="static @Html.ClassForPage(pageClass)">
 <head>
     <meta charset="utf-8" />
-    <title>@Html.Title(siteName, title)</title>
+    <title>@Html.Title(suffix, siteName, title)</title>
     @Display(Model.Head)
     <script>(function (d) { d.className = "dyn" + d.className.substring(6, d.className.length); })(document.documentElement);</script>
 </head>
