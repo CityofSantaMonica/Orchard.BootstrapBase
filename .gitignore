@@ -2,4 +2,5 @@
 /[Oo]bj/
 *.css
 *.css.map
+*.TMP
 *.user
