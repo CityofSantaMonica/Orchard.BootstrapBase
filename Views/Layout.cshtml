@@ -81,6 +81,11 @@
     }
     <div id="layout-content-container" class="container">
         <div id="layout-content">
+            @if (Model.Messages != null) {
+            <div id="messages">
+                @Zone(Model.Messages)
+            </div>
+            }
             @if (Model.AsideFirst != null) {
             <aside id="aside-first" class="aside-first">
                 @Zone(Model.AsideFirst)
