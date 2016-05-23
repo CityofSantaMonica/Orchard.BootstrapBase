@@ -83,14 +83,13 @@ body {
     background-color: @aside-first-bg;
 }
 
-#layout-main {
+#content {
     //default to 12 column content area
     .make-md-column(12);
     background-color: @layout-content-bg;
+    //See http://getbootstrap.com/getting-started/#skip-navigation
+    &:focus { outline: none; }
 }
-
-//See http://getbootstrap.com/getting-started/#skip-navigation
-#content:focus { outline: none; }
 
 #aside-second {
     background-color: @aside-second-bg;
@@ -101,16 +100,17 @@ body {
     .make-md-column(3);
 }
 //when EITHER the left OR right aside is present
-.aside-1 &, .aside-2 & {
+.aside-1,
+.aside-2 {
     //make the local content zone 9 columns
-    #layout-main {
+    & #content {
         .make-md-column(9);
     }
 }
 //when BOTH the left AND right aside are present
-.aside-12 & {
+.aside-12 {
     //make the local content zone 6 columns
-    #layout-main {
+    & #content {
         .make-md-column(6);
     }
 }
