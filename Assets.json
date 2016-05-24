@@ -4,5 +4,11 @@
     "output": "Styles/site.css",
     "watch": [ "Styles/*.less" ],
     "generateSourceMaps": false
+  },
+  {
+    "inputs": [ "Styles/CollapseContent/collapse-content.less" ],
+    "output": "Styles/CollapseContent/collapse-content.css",
+    "watch": [ "Styles/CollapseContent/collapse-content.less" ],
+    "generateSourceMaps": false
   }
 ]

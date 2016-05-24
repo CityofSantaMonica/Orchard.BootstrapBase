@@ -12,6 +12,10 @@ namespace CSM.BootstrapBase
                 .DefineScript("CollapseContent")
                 .SetUrl("CollapseContent/collapse-content.js")
                 .SetDependencies("JQuery");
+
+            manifest
+                .DefineStyle("CollapseContent")
+                .SetUrl("CollapseContent/collapse-content.css");
         }
     }
 }
