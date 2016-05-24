@@ -6,15 +6,15 @@
     // Zone as an alias for Display to help make it obvious when we're displaying zones
     Func<dynamic, dynamic> Zone = x => Display(x);
 
-    bool hasHeaderItems = LayoutHelpers.HasItems(Model.Header);
+    bool hasAlertItems = LayoutHelpers.HasItems(Model.AlertBar);
     bool hasNavbarItems = LayoutHelpers.HasItems(Model.Navigation);
     bool hasContextNavItems = LayoutHelpers.HasItems(Model.ContextNav);
 
-    var navbarItems = hasNavbarItems ? Model.Navigation.Items : Enumerable.Empty<dynamic>();
-    var contextNavItems = hasContextNavItems ? Model.ContextNav.Items : Enumerable.Empty<dynamic>();
+    var navbarItems = CoreShapes.Order(hasNavbarItems ? Model.Navigation.Items : Enumerable.Empty<dynamic>());
+    var contextNavItems = CoreShapes.Order(hasContextNavItems ? Model.ContextNav.Items : Enumerable.Empty<dynamic>());
 
-    if (hasHeaderItems) {
-        Model.Classes.Add("with-header");
+    if (hasAlertItems) {
+        Model.Classes.Add("with-alertbar");
     }
     if (hasContextNavItems) {
         Model.Classes.Add("with-contextnav");
@@ -43,20 +43,20 @@
 
 @tag.StartElement
 <div id="layout-navigation-wrapper">
-    @if (hasHeaderItems) {
-    <header id="layout-header">
+    @if (hasAlertItems) {
+    <div id="layout-alertbar">
         <div class="container">
-            @Zone(Model.Header)
+            @Zone(Model.AlertBar)
         </div>
-    </header>
+    </div>
     }
     <div id="layout-navigation">
         <nav class="zone zone-navigation navbar navbar-default">
             <div class="container">
-                @{ var target = "navbar-collapse"; }
-                @Display.NavbarHeader(ShowHamburger: hasNavbarItems, DataTarget: "#" + target)
+                @{ var navbartarget = "navbar-collapse"; }
+                @Display.NavbarHeader(ShowHamburger: hasNavbarItems, DataTarget: "#" + navbartarget)
                 @if (hasNavbarItems){
-                    @Display.NavbarCollapse(DataTarget: target, Items: navbarItems)
+                    @Display.NavbarCollapse(DataTarget: navbartarget, Items: navbarItems)
                 }
             </div>
         </nav>
@@ -65,9 +65,10 @@
     <div id="layout-contextnav">
         <nav class="zone zone-contextnav navbar navbar-secondary">
             <div class="container">
-                @foreach (var item in CoreShapes.Order(contextNavItems)) {
-                    @Display(item)
-                }
+                @Display.ContextNavLabel()
+                @{ var contextnavtarget = "contextnav-collapse"; }
+                @Display.NavbarHeader(ShowHamburger: true, ShowBrand: false, DataTarget: "#" + contextnavtarget)
+                @Display.NavbarCollapse(DataTarget: contextnavtarget, Items: contextNavItems)
             </div>
         </nav>
     </div>
@@ -79,7 +80,7 @@
         @Zone(Model.Featured)
     </div>
     }
-    <div id="layout-content-container" class="container">
+    <div id="layout-content-container">
         <div id="layout-content">
             @if (Model.Messages != null) {
             <div id="messages">
@@ -91,13 +92,11 @@
                 @Zone(Model.AsideFirst)
             </aside>
             }
-            <div id="layout-main">
-                @* See http://getbootstrap.com/getting-started/#skip-navigation *@
-                <div id="content" tabindex="-1">
-                    @* the *local* content zone is in here *@
-                    @Zone(Model.Content)
-                </div>
-            </div>
+            @* See http://getbootstrap.com/getting-started/#skip-navigation *@
+            <main id="content" tabindex="-1">
+                @* the *local* content zone is in here *@
+                @Zone(Model.Content)
+            </main>
             @if (Model.AsideSecond != null) {
             <aside id="aside-second" class="aside-second">
                 @Zone(Model.AsideSecond)
@@ -106,7 +105,7 @@
         </div>
     </div>
     @if (Model.TripelFirst != null || Model.TripelSecond != null || Model.TripelThird != null) {
-    <div id="layout-tripel-container" class="container">
+    <div id="layout-tripel-container">
         <div id="layout-tripel">
             @* as in beer *@
             @if (Model.TripelFirst != null) {

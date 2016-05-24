@@ -5,4 +5,4 @@ Description: Base theme for City of Santa Monica Orchard-based websites, using T
 Version: 1.0.0
 OrchardVersion: 1.10.1
 Tags: Bootstrap
-Zones: Header, Navigation, ContextNav, Featured, Messages, AsideFirst, Content, AsideSecond, TripelFirst, TripelSecond, TripelThird, FooterNav, Footer
+Zones: AlertBar, Navigation, ContextNav, Featured, Messages, AsideFirst, Content, AsideSecond, TripelFirst, TripelSecond, TripelThird, FooterNav, Footer
