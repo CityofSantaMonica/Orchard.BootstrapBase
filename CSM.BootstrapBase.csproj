@@ -98,6 +98,7 @@
     <Content Include="Images\city-button.svg" />
     <Content Include="Images\city-logo.png" />
     <Content Include="Images\favicon.ico" />
+    <Content Include="Scripts\CollapseContent\collapse-content.js" />
     <Content Include="Web.config" />
     <Content Include="Styles\Web.config" />
     <Content Include="Theme.txt" />
@@ -112,6 +113,10 @@
     <ProjectReference Include="..\..\Core\Orchard.Core.csproj">
       <Project>{9916839C-39FC-4CEB-A5AF-89CA7E87119F}</Project>
       <Name>Orchard.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Modules\Orchard.Layouts\Orchard.Layouts.csproj">
+      <Project>{6bd8b2fa-f2e3-4ac8-a4c3-2925a653889a}</Project>
+      <Name>Orchard.Layouts</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Modules\Orchard.Users\Orchard.Users.csproj">
       <Project>{79aed36e-abd0-4747-93d3-8722b042454b}</Project>
@@ -172,9 +177,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LayoutHelpers.cs" />
+    <Compile Include="ResourceManifest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\NavbarCollapse.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ContextNavLabel.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Content.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\CollapseContentSnippet.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

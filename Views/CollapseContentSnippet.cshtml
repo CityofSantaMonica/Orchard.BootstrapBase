@@ -1,0 +1,16 @@
+﻿@using Orchard.Layouts.Helpers
+
+@{
+    var root = Html.SnippetField("Root").DisplayedAs(T("Root selector")).WithDescription(T("A selector that targets the container of this collapsible."));
+    var start = Html.SnippetField("Start").DisplayedAs(T("Starting level")).WithDescription(T("The starting heading level (1 - 6)"));
+    var end = Html.SnippetField("End").DisplayedAs(T("Ending level")).WithDescription(T("The ending heading level (1 - 6), should be equal to or greater than 'Start'"));
+
+    using (Script.Foot())
+    {
+        Script.Require("CollapseContent");
+
+        <script>
+        collapseContent("@root", @start, @end);
+        </script>
+    }
+}
