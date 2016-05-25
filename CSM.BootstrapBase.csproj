@@ -194,6 +194,12 @@
   <ItemGroup>
     <Content Include="Styles\CollapseContent\collapse-content.less" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\CollapseContentSnippet.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\Web.config" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -1,0 +1,12 @@
+﻿Fields:
+  - Name: Root
+    DisplayName: Container selector
+    Description: A selector that targets the container of this collapsible
+
+  - Name: Start
+    DisplayName: Starting level
+    Description: The starting heading level (1 - 6)
+
+  - Name: End
+    DisplayName: Ending level
+    Description: The ending heading level (1 - 6), should be equal to or greater than 'Start'
