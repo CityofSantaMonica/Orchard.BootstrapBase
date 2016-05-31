@@ -1,0 +1,19 @@
+﻿@using Orchard.Layouts.Helpers
+<div id="google_translate_element"></div>
+@{
+    using (Script.Foot())
+    {
+        Script.Require("GoogleTranslate");
+
+        <script>
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'en',
+                    layout: google.translate.TranslateElement.FloatPosition.TOP_RIGHT,
+                    autoDisplay: true,
+                    multilanguagePage: true
+                }, 'google_translate_element');
+            };
+        </script>
+    }
+}
