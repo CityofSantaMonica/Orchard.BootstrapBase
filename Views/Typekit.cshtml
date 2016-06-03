@@ -1,7 +1,7 @@
 ﻿
 @if (!String.IsNullOrEmpty(Model.TypekitId))
 {
-    Script.Include(String.Format("//use.typekit.net/{0}.js", Model.TypekitId)).AtHead();
+    Script.Include(String.Format("https://use.typekit.net/{0}.js", Model.TypekitId)).AtHead();
     
     using (Script.Head())
     {

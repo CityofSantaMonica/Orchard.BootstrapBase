@@ -16,10 +16,6 @@ namespace CSM.BootstrapBase
             manifest
                 .DefineStyle("CollapseContent")
                 .SetUrl("CollapseContent/collapse-content.css");
-
-            manifest
-                .DefineScript("GoogleTranslate")
-                .SetUrl("//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit");
         }
     }
 }
