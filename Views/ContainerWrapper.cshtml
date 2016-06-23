@@ -1,0 +1,8 @@
+﻿@{ 
+    Model.Classes.Add("container");
+    var tag = Tag(Model, "div");
+}
+
+@tag.StartElement
+@Display(Model.Child)
+@tag.EndElement
