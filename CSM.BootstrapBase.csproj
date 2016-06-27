@@ -99,6 +99,7 @@
     <Content Include="Images\city-logo.png" />
     <Content Include="Images\favicon.ico" />
     <Content Include="Scripts\CollapseContent\collapse-content.js" />
+    <Content Include="Views\FacebookPixelSnippet.txt" />
     <Content Include="Web.config" />
     <Content Include="Styles\Web.config" />
     <Content Include="Theme.txt" />
@@ -205,6 +206,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\ContainerWrapper.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\FacebookPixelSnippet.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

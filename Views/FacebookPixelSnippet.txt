@@ -1,0 +1,4 @@
+﻿Fields:
+  - Name: ID
+    DisplayName: Facebook Pixel ID
+    Description: The identifier for this Facebook Pixel
