@@ -1,0 +1,22 @@
+﻿@import "variables.less";
+
+blockquote {
+    & footer,
+    & small,
+    & .small {
+        color: lighten(@gray-base, 60%);
+    }
+}
+
+figcaption {
+    font-size: @font-size-small;
+}
+
+@media @media-sm {
+    .jumbotron {
+        h1,
+        .h1 {
+            font-size: (@font-size-base * 1.75);
+        }
+    }
+}

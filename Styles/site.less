@@ -1,99 +1,15 @@
 ﻿//the root LESS file, the compiled version of which is included in the rendered page by the theme
-//this file should @import all other required LESS/CSS files that makeup the theme
+//this file should @import all other required LESS/CSS files that make up the theme
 
 @import "../../../Modules/Orchard.Resources/Assets/Less/Bootstrap/bootstrap.less";
 
 /** CSM.BootstrapBase theme imports **/
 
-@import "variables.less";
-@import "layout.less";
-@import "navbar.less";
 @import "forms.less";
-
-blockquote {
-    & footer,
-    & small,
-    & .small {
-        color: lighten(@gray-base, 60%);
-    }
-}
-
-figcaption {
-    font-size: @font-size-small;
-}
-
-img {
-    max-width: 100%;
-}
-
-table:not(.table-custom) {
-    .table();
-    .table-bordered();
-    .table-condensed();
-    .table-hover();
-    .table-striped();
-}
-
-// apply the .glyphicon-spin class to any glyphicon
-// to make it spin around the center
-.glyphicon-spin {
-    -webkit-animation: spin 1000ms infinite linear;
-    animation: spin 1000ms infinite linear;
-}
-@-webkit-keyframes spin {
-    0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(359deg);
-        transform: rotate(359deg);
-    }
-}
-@keyframes spin {
-    0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(359deg);
-        transform: rotate(359deg);
-    }
-}
-
-@media @media-sm {
-    .jumbotron {
-        h1,
-        .h1 {
-            font-size: (@font-size-base * 1.75);
-        }
-    }
-}
-
-.back-to-top {
-    margin: (@gutter / 2) auto;
-    @media @media-md {
-        visibility: hidden !important;
-        display: none !important;
-    }
-}
-
-.message {
-    margin-bottom: @gutter / 2;
-    margin-top: @gutter;
-    padding-bottom: @gutter / 2;
-    padding-top: @gutter / 2;
-}
-
-.message-Information {
-    &:extend(.bg-success);
-    border: solid 1px darken(@state-success-bg, 10%);
-}
-.message-Warning {
-    &:extend(.bg-warning);
-    border: solid 1px darken(@state-warning-bg, 10%);
-}
-.message-Error {
-    &:extend(.bg-danger);
-    border: solid 1px darken(@state-danger-bg, 10%);
-}
+@import "images.less";
+@import "layout.less";
+@import "messages.less";
+@import "navbar.less";
+@import "tables.less";
+@import "type.less";
+@import "variables.less";

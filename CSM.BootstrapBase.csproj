@@ -210,6 +210,18 @@
   <ItemGroup>
     <Content Include="Views\FacebookPixelSnippet.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\messages.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\type.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\tables.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\images.less" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
