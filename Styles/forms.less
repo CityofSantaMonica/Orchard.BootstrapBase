@@ -12,14 +12,17 @@
         }
     }
 
+    > textarea {
+        height: auto;
+    }
+}
+
+.form-group {
     > input,
     > select,
     > textarea {
         &:extend(.form-control);
-    }
-
-    > textarea {
-        height: auto;
+        margin-bottom: @input-bottom-margin;
     }
 }
 
