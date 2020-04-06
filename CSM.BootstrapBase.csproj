@@ -99,7 +99,8 @@
     <Content Include="Images\city-logo.png" />
     <Content Include="Images\favicon.ico" />
     <Content Include="Scripts\CollapseContent\collapse-content.js" />
-    <Content Include="Views\FacebookPixelSnippet.txt" />
+    <Content Include="Views\Elements\GoogleTranslateSnippet.txt" />
+    <Content Include="Views\Elements\FacebookPixelSnippet.txt" />
     <Content Include="Web.config" />
     <Content Include="Styles\Web.config" />
     <Content Include="Theme.txt" />
@@ -190,25 +191,25 @@
     <Content Include="Views\Content.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\CollapseContentSnippet.cshtml" />
+    <Content Include="Views\Elements\CollapseContentSnippet.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Styles\CollapseContent\collapse-content.less" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\CollapseContentSnippet.txt" />
+    <Content Include="Views\Elements\CollapseContentSnippet.txt" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\GoogleTranslateSnippet.cshtml" />
+    <Content Include="Views\Elements\GoogleTranslateSnippet.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\ContainerWrapper.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\FacebookPixelSnippet.cshtml" />
+    <Content Include="Views\Elements\FacebookPixelSnippet.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Styles\messages.less" />
