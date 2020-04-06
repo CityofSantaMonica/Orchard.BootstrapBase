@@ -1,4 +1,6 @@
-﻿Fields:
+﻿ToolboxIcon: "\uf09a"
+Description: Insert a Facebook Pixel on this content item
+Fields:
   - Name: ID
     DisplayName: Facebook Pixel ID
     Description: The identifier for this Facebook Pixel

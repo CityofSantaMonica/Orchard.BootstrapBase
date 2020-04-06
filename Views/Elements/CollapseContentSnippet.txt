@@ -1,4 +1,7 @@
-﻿Fields:
+﻿Category: Content
+ToolboxIcon: "\uf054"
+Description: Create collapsible content sections
+Fields:
   - Name: Root
     DisplayName: Container selector
     Description: A selector that targets the container of this collapsible

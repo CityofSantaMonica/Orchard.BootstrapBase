@@ -1,0 +1,2 @@
+﻿ToolboxIcon: "\uf1a0"
+Description: Insert a Google Translate element on this content item
