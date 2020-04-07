@@ -1,0 +1,46 @@
+﻿@using Orchard.Layouts.Helpers
+
+@{
+    var text = Html.SnippetField("Text").ToString();
+    var url = Html.SnippetField("Url").ToString();
+    var title = Html.SnippetField("Title").ToString();
+
+    var target = Html.SnippetField("Target").ToString();
+    if (String.IsNullOrEmpty(target) || !String.Equals(target, "_blank", StringComparison.OrdinalIgnoreCase))
+    {
+        target = "_self";
+    }
+
+    var size = Html.SnippetField("Size").ToString();
+    switch (size)
+    {
+        case "xsmall":
+            size = "btn-xs"; break;
+        case "small":
+            size = "btn-sm"; break;
+        case "large":
+            size = "btn-lg"; break;
+        default:
+            size = null; break;
+    }
+
+    var style = Html.SnippetField("Style").ToString();
+    if (String.IsNullOrEmpty(style))
+    {
+        style = "primary";
+    }
+
+    switch (style)
+    {
+        case "primary":
+        case "success":
+        case "info":
+        case "warning":
+        case "danger":
+            style = "btn-" + style; break;
+        default:
+            style = "btn-default"; break;
+    }
+
+    <a href="@url" class="btn @size @style" title="@title" target="@target">@text</a>
+}

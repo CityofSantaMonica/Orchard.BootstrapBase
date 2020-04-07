@@ -1,0 +1,27 @@
+﻿Category: Content
+ToolboxIcon: "\uf0c1"
+Description: Add a link styled as a button
+Fields:
+  - Name: Text
+    DisplayName: Text to display
+    Description: The text to display on the button
+
+  - Name: Url
+    DisplayName: Url
+    Description: Clicking the button navigates to this URL
+
+  - Name: Title
+    DisplayName: Title
+    Description: (Optional) the link's title attribute
+
+  - Name: Target
+    DisplayName: Target
+    Description: "(Optional) the link's target attribute ('_blank' to open in new window/tab)"
+
+  - Name: Size
+    DisplayName: Size
+    Description: "(Optional) the button size: 'xsmall', 'small', 'medium', 'large'"
+
+  - Name: Style
+    DisplayName: Style
+    Description: "(Optional) the button style: 'none', 'success', 'info', 'warning', 'danger'"
