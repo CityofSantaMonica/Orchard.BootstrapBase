@@ -101,6 +101,8 @@
     <Content Include="Scripts\CollapseContent\collapse-content.js" />
     <Content Include="Views\Elements\GoogleTranslateSnippet.txt" />
     <Content Include="Views\Elements\FacebookPixelSnippet.txt" />
+    <Content Include="Views\Elements\LinkButtonSnippet.cshtml" />
+    <Content Include="Views\Elements\LinkButtonSnippet.txt" />
     <Content Include="Web.config" />
     <Content Include="Styles\Web.config" />
     <Content Include="Theme.txt" />
